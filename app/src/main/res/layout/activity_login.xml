@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Login"
+    android:background="#151515">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="636dp"
+        android:src="@drawable/back_arrow">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="445dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Login to your\nAccount"
+        android:textColor="@color/white"
+        android:textSize="50dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="287dp"
+        android:layout_marginBottom="401dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Nickname"
+        android:textColor="@color/white"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="346dp"
+        android:background="@drawable/login_edittext"
+        android:inputType="text">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="286dp"
+        android:layout_marginBottom="305dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Password"
+        android:textColor="@color/white"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="254dp"
+        android:background="@drawable/login_edittext"
+        android:inputType="textPassword">
+
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/remember_me_checkbox"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginBottom="195dp"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="210dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Remember me"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+    </TextView>
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="95dp"
+        android:text="Sign In"
+        android:backgroundTint="#153D8E">
+    </Button>
+
+    <TextView
+        android:id="@+id/forgot_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="653dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="58dp"
+        android:text="Forgot my Password"
+        android:textColor="@color/white"
+        android:textSize="15sp">
+
+    </TextView>
+
+
+</RelativeLayout>

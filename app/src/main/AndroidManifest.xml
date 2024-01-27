@@ -12,6 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gymrat"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Gender"
+            android:exported="false" />
+        <activity
+            android:name=".Age"
+            android:exported="false" />
+        <activity
+            android:name=".Intro2"
+            android:exported="false" />
+        <activity
+            android:name=".Intro1"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

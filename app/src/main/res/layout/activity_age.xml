@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Age"
+    android:background="#151515">
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="HOW OLD ARE YOU?"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Share you age for a custom-tailored workout designed\n to meet your specific fitness goals."
+        android:textColor="#757575"
+        android:textSize="15sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        >
+
+    </Button>
+
+
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Continue"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </Button>
+
+
+</RelativeLayout>
