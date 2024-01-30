@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="FILL YOUR PROFILE"
         android:textColor="@color/white"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="70dp"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="You can modify your identification info anytime for accurate\n and up-to-date details."
         android:textColor="#757575"
@@ -81,6 +81,7 @@
         android:height="1000dp"
         android:background="@drawable/profile_edittext"
         android:hint=" Nickname"
+        android:fontFamily="@font/mainfont"
         android:maxLines="1">
     </EditText>
 
@@ -97,6 +98,7 @@
         android:height="1000dp"
         android:background="@drawable/profile_edittext"
         android:hint=" Password"
+        android:fontFamily="@font/mainfont"
         android:inputType="textPassword">
     </EditText>
 
@@ -112,6 +114,7 @@
         android:layout_marginEnd="32dp"
         android:height="1000dp"
         android:background="@drawable/profile_edittext"
+        android:fontFamily="@font/mainfont"
         android:hint=" Confirm Password">
     </EditText>
 
@@ -128,6 +131,7 @@
         android:height="1000dp"
         android:background="@drawable/profile_edittext"
         android:hint=" Phone Number"
+        android:fontFamily="@font/mainfont"
         android:inputType="number">
     </EditText>
 
@@ -141,6 +145,7 @@
         android:text="Back"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:fontFamily="@font/mainfont"
         android:textStyle="bold">
 
     </Button>
@@ -156,6 +161,7 @@
         android:backgroundTint="@color/button_color"
         android:text="Continue"
         android:textColor="@color/black"
+        android:fontFamily="@font/mainfont"
         android:textSize="20sp"
         android:textStyle="bold">
     </Button>

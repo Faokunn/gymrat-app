@@ -8,15 +8,18 @@
     android:background="#151515">
 
 
-
-
-
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="69dp"
         android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-condensed"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="661dp"
+        android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="HOW OLD ARE YOU?"
         android:textColor="@color/white"
@@ -26,11 +29,14 @@
     </TextView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="306dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="49dp"
         android:layout_marginTop="70dp"
-        android:fontFamily="sans-serif-condensed"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="Share you age for a custom-tailored workout designed\n to meet your specific fitness goals."
         android:textColor="#757575"
@@ -46,6 +52,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="560dp"
         android:backgroundTint="@color/button_color"
+        android:fontFamily="@font/mainfont"
         android:text="Back"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -62,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="230dp"
         android:layout_marginTop="560dp"
+        android:fontFamily="@font/mainfont"
         android:backgroundTint="@color/button_color"
         android:text="Continue"
         android:textColor="@color/black"
