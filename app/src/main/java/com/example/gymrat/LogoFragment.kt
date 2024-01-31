@@ -25,7 +25,7 @@ class LogoFragment : Fragment() {
 
             }
             override fun onFinish() {
-                findNavController().navigate(R.id.action_logoFragment_to_intro1)
+                findNavController().navigate(R.id.action_logoFragment_to_intro1Fragment)
             }
         }
         timer.start()

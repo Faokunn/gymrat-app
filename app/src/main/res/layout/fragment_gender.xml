@@ -31,13 +31,13 @@
         android:textColor="#757575"
         android:textSize="15sp"
         android:textStyle="bold">
-
     </TextView>
+
 
     <ImageView
         android:id="@+id/male_button"
-        android:layout_width="199dp"
-        android:layout_height="289dp"
+        android:layout_width="165dp"
+        android:layout_height="211dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -48,12 +48,10 @@
         android:layout_marginBottom="332dp"
         android:src="@drawable/male_logo" />
 
-
     <ImageView
-        android:fontFamily="@font/mainfont"
         android:id="@+id/female_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="210dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -62,6 +60,7 @@
         android:layout_marginTop="290dp"
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="151dp"
+        android:fontFamily="@font/mainfont"
         android:src="@drawable/female_logo" />
 
     <Button
@@ -81,27 +80,18 @@
         android:text="Continue"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold">
+        android:textStyle="bold"/>
 
-    </Button>
-
-    <TextView
-        android:layout_width="77dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="620dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="84dp"
-        android:text="Return"
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="605dp"
+        android:backgroundTint="#151515"
         android:fontFamily="@font/mainfont"
+        android:text="return"
         android:textColor="#707070"
-        android:textSize="20sp">
-
-
-    </TextView>
+        android:textSize="13sp"/>
 
 </FrameLayout>

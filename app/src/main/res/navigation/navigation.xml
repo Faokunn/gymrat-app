@@ -11,14 +11,33 @@
         android:label="fragment_logo"
         tools:layout="@layout/fragment_logo" >
         <action
-            android:id="@+id/action_logoFragment_to_intro1"
-            app:destination="@id/intro1"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            android:id="@+id/action_logoFragment_to_intro1Fragment"
+            app:destination="@id/intro1Fragment" />
     </fragment>
-    <activity
-        android:id="@+id/intro1"
-        android:name="com.example.gymrat.Intro1"
-        android:label="activity_intro1"
-        tools:layout="@layout/activity_intro1" />
+    <fragment
+        android:id="@+id/intro1Fragment"
+        android:name="com.example.gymrat.Intro1Fragment"
+        android:label="fragment_intro1"
+        tools:layout="@layout/fragment_intro1" >
+        <action
+            android:id="@+id/action_intro1Fragment_to_intro2Fragment"
+            app:destination="@id/intro2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro2Fragment"
+        android:name="com.example.gymrat.Intro2Fragment"
+        android:label="fragment_intro2"
+        tools:layout="@layout/fragment_intro2" >
+        <action
+            android:id="@+id/action_intro2Fragment_to_intro1Fragment"
+            app:destination="@id/intro1Fragment" />
+        <action
+            android:id="@+id/action_intro2Fragment_to_genderFragment"
+            app:destination="@id/genderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.example.gymrat.GenderFragment"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" />
 </navigation>
