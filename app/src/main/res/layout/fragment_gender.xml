@@ -60,8 +60,8 @@
 
     <ImageButton
         android:id="@+id/female_button"
-        android:layout_width="159dp"
-        android:layout_height="162dp"
+        android:layout_width="161dp"
+        android:layout_height="153dp"
         android:backgroundTint="#E91E63"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
