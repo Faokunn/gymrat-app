@@ -10,7 +10,6 @@ import com.example.gymrat.databinding.FragmentIntro1Binding
 
 class Intro1Fragment : Fragment() {
     private lateinit var binding: FragmentIntro1Binding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,7 +19,9 @@ class Intro1Fragment : Fragment() {
         binding.next.setOnClickListener {
             findNavController().navigate(R.id.action_intro1Fragment_to_intro2Fragment)
         }
+        binding.back.setOnClickListener {
+            findNavController().navigate(R.id.action_intro1Fragment_to_intro0Fragment)
+        }
         return binding.root
     }
-
 }

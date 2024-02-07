@@ -6,19 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.gymrat.databinding.FragmentInfoBinding
-import com.example.gymrat.databinding.FragmentLoginBinding
+import com.example.gymrat.databinding.FragmentIntro0Binding
 
-class LoginFragment : Fragment() {
-
-    private lateinit var binding: FragmentLoginBinding
+class intro0Fragment : Fragment() {
+    private lateinit var binding: FragmentIntro0Binding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(inflater,container,false)
-        binding.signInButton.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment2_to_homiesFragment)
+        binding = FragmentIntro0Binding.inflate(inflater,container,false)
+        binding.signup.setOnClickListener {
+            findNavController().navigate(R.id.action_intro0Fragment_to_intro1Fragment)
         }
         return binding.root
     }

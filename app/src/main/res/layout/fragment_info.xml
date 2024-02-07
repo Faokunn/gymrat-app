@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".InfoFragment">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/mainfont"
+        android:gravity="center"
+        android:text="FILL YOUR PROFILE"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mainfont"
+        android:gravity="center"
+        android:text="You can modify your identification info anytime \nfor accurate and up-to-date details."
+        android:textColor="#757575"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.023">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="288dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint=" Phone Number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password"></EditText>
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="288dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        android:hint=" Confirm Pin"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"></EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint=" Pin"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="68dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint=" Nickname"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="272dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/white"
+        android:text="Continue"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number"
+        app:layout_constraintVertical_bias="0.0"></Button>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/mainfont"
+        android:text="return"
+        android:textColor="#707070"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continue_button"
+        app:layout_constraintVertical_bias="0.0">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
