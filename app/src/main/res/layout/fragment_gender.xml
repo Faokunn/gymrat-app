@@ -5,56 +5,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#151515"
+    android:background="@color/black"
     tools:context=".GenderFragment">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="TELL US ABOUT YOURSELF"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076">
-    </TextView>
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="To give you a better experience and results\n we need to know your gender."
         android:textColor="#757575"
-        android:textSize="17sp"
+        android:textSize="11sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.011">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/textView3"></TextView>
 
     <ImageButton
         android:id="@+id/male_button"
         android:layout_width="161dp"
         android:layout_height="153dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rounded_button_male"
         android:backgroundTint="#3F51B5"
         android:src="@drawable/male_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.125">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
     </ImageButton>
 
@@ -62,56 +57,54 @@
         android:id="@+id/female_button"
         android:layout_width="161dp"
         android:layout_height="153dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_button_male"
         android:backgroundTint="#E91E63"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/female_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/male_button"
-        app:layout_constraintVertical_bias="0.1"
-        android:background="@drawable/rounded_button_male"
-        android:src="@drawable/female_logo">
-    </ImageButton>
+        app:layout_constraintTop_toBottomOf="@+id/male_button"></ImageButton>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/button_color"
-        android:text="Continue"
-        android:fontFamily="@font/mainfont"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/female_button"
-        app:layout_constraintVertical_bias="0.287">
-    </Button>
-
-    <TextView
+        android:id="@+id/rather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Return"
+        android:backgroundTint="@color/black"
         android:fontFamily="@font/mainfont"
-        android:textColor="#707070"
-        android:textSize="20sp"
+        android:text="prefer not to answer"
+        android:textColor="#E8FFFFFF"
+        android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.444">
+        app:layout_constraintTop_toBottomOf="@+id/female_button"
+        app:layout_constraintVertical_bias="0.192" />
 
-    </TextView>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/mainfont"
+        android:text="return"
+        android:textColor="#707070"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rather"
+        app:layout_constraintVertical_bias="0.0">
+
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
