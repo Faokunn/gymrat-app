@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".ShoulderFragment">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="356dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="-10dp"
+        android:background="#D9D9D9"
+        android:alpha="0.50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/mainfont"
+        android:text="SHOULDER"
+        android:letterSpacing="0.3"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="36dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#0"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="126dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/dumble"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/mainfont"
+        android:text="Front Delts:\n01: Seated Dumbbell Shoulder Press 1\n02: Seated Barbell Shoulder Press\n03: Standing Dumbbell Shoulder Press 1"
+        android:textColor="@color/white"
+        android:textSize="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageVie9"
+        android:layout_width="126dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/dumble"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/push_txt"
+        android:layout_width="132dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mainfont"
+        android:text="Lateral Delts:\n01: Dumbbell lateral raise 1\n02: Lying Inclined lateral raise\n03: Cable lateral raise"
+        android:textColor="@color/white"
+        android:textSize="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imageVie9"
+        app:layout_constraintTop_toTopOf="@+id/imageVie9" />
+
+    <ImageView
+        android:id="@+id/a_img"
+        android:layout_width="126dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/dumble"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageVie9" />
+
+    <TextView
+        android:id="@+id/lower"
+        android:layout_width="175dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/mainfont"
+        android:text="Rear Delts:\n01: Cable Rear Delt flyes (Double arm)\n02: Cable Rear Delt flyes (Single arm)\n03: Reverse Pec Deck machine   "
+        android:textColor="@color/white"
+        android:textSize="8dp"
+        app:layout_constraintStart_toEndOf="@+id/a_img"
+        app:layout_constraintTop_toTopOf="@+id/a_img" />
+
+    <TextView
+        android:id="@+id/popular"
+        android:layout_width="84dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/mainfont"
+        android:text="POPULAR\nPROGRAMS"
+        android:textColor="@color/white"
+        android:textSize="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_img" />
+
+    <HorizontalScrollView
+        android:layout_width="375dp"
+        android:layout_height="182dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bworkout"
+                android:layout_width="165dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/popular"
+                android:clipToOutline="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/bworkout_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:layout_marginLeft="10dp"
+                android:text="Biceps\nWorkout"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/bworkout"
+                app:layout_constraintEnd_toEndOf="@+id/bworkout"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/bworkout"
+                app:layout_constraintTop_toTopOf="@+id/bworkout"
+                app:layout_constraintVertical_bias="0.782" />
+
+            <Button
+                android:id="@+id/cworkout"
+                android:layout_width="165dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/popular"
+                android:clipToOutline="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bworkout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/cworkout_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:layout_marginLeft="10dp"
+                android:text="Chest\nWorkout"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/cworkout"
+                app:layout_constraintEnd_toEndOf="@+id/cworkout"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/cworkout"
+                app:layout_constraintTop_toTopOf="@+id/cworkout"
+                app:layout_constraintVertical_bias="0.782" />
+
+            <Button
+                android:id="@+id/tworkout"
+                android:layout_width="165dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/popular"
+                android:clipToOutline="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cworkout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tworkout_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:layout_marginLeft="10dp"
+                android:text="Triceps\nWorkout"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tworkout"
+                app:layout_constraintEnd_toEndOf="@+id/tworkout"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/tworkout"
+                app:layout_constraintTop_toTopOf="@+id/tworkout"
+                app:layout_constraintVertical_bias="0.782" />
+
+            <TextView
+                android:id="@+id/asdasdad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:text="Triceps\nWorkout"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tworkout"
+                app:layout_constraintEnd_toEndOf="@+id/tworkout"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toEndOf="@+id/tworkout"
+                app:layout_constraintTop_toTopOf="@+id/tworkout"
+                app:layout_constraintVertical_bias="0.782" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="5"
+        android:src="@drawable/resource_return"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
