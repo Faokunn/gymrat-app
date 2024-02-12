@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/logoFragment">
+
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.example.gymrat.LogoFragment"
+        android:label="fragment_logo"
+        tools:layout="@layout/fragment_logo" >
+        <action
+            android:id="@+id/action_logoFragment_to_intro1Fragment"
+            app:destination="@id/intro0Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro1Fragment"
+        android:name="com.example.gymrat.Intro1Fragment"
+        android:label="fragment_intro1"
+        tools:layout="@layout/fragment_intro1" >
+        <action
+            android:id="@+id/action_intro1Fragment_to_intro2Fragment"
+            app:destination="@id/intro2Fragment" />
+        <action
+            android:id="@+id/action_intro1Fragment_to_intro0Fragment"
+            app:destination="@id/intro0Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro2Fragment"
+        android:name="com.example.gymrat.Intro2Fragment"
+        android:label="fragment_intro2"
+        tools:layout="@layout/fragment_intro2" >
+        <action
+            android:id="@+id/action_intro2Fragment_to_intro1Fragment"
+            app:destination="@id/intro1Fragment" />
+        <action
+            android:id="@+id/action_intro2Fragment_to_genderFragment"
+            app:destination="@id/genderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.example.gymrat.GenderFragment"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action android:id="@+id/action_genderFragment_to_homiesFragment" />
+        <action
+            android:id="@+id/action_genderFragment_to_intro2Fragment"
+            app:destination="@id/intro2Fragment" />
+        <action
+            android:id="@+id/action_genderFragment_to_infoFragment2"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homiesFragment"
+        android:name="com.example.gymrat.HomiesFragment"
+        android:label="fragment_homies"
+        tools:layout="@layout/fragment_homies" >
+        <action
+            android:id="@+id/action_homiesFragment_to_chestfragment"
+            app:destination="@id/chestfragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro0Fragment"
+        android:name="com.example.gymrat.intro0Fragment"
+        android:label="fragment_intro0"
+        tools:layout="@layout/fragment_intro0" >
+        <action
+            android:id="@+id/action_intro0Fragment_to_intro1Fragment"
+            app:destination="@id/intro1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.gymrat.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.gymrat.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chestfragment"
+        android:name="com.example.gymrat.Chestfragment"
+        android:label="fragment_chestfragment"
+        tools:layout="@layout/fragment_chestfragment" >
+        <action
+            android:id="@+id/action_chestfragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.gymrat.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+<<<<<<< HEAD
+    <fragment
+        android:id="@+id/backFragment"
+        android:name="com.example.gymrat.BackFragment"
+        android:label="fragment_back"
+        tools:layout="@layout/fragment_back" />
+    <fragment
+        android:id="@+id/shoulderFragment"
+        android:name="com.example.gymrat.ShoulderFragment"
+        android:label="fragment_shoulder"
+        tools:layout="@layout/fragment_shoulder" />
+=======
+>>>>>>> origin/main
+</navigation>
