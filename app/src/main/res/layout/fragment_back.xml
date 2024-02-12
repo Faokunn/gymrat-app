@@ -38,7 +38,7 @@
         android:id="@+id/back"
         android:layout_width="36dp"
         android:layout_height="44dp"
-        android:backgroundTint="#0"
+        android:backgroundTint="#0000"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.817"
@@ -229,16 +229,14 @@
                 android:id="@+id/asdasdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="128dp"
                 android:fontFamily="@font/mainfont"
                 android:text="Triceps\nWorkout"
                 android:textColor="@color/white"
                 android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/tworkout"
-                app:layout_constraintEnd_toEndOf="@+id/tworkout"
-                app:layout_constraintHorizontal_bias="0.129"
-                app:layout_constraintStart_toEndOf="@+id/tworkout"
-                app:layout_constraintTop_toTopOf="@+id/tworkout"
-                app:layout_constraintVertical_bias="0.782" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/bworkout"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
@@ -247,7 +245,7 @@
         android:id="@+id/imageView6"
         android:layout_width="37dp"
         android:layout_height="38dp"
-        android:layout_marginTop="5"
+        android:layout_marginTop="5dp"
         android:src="@drawable/resource_return"
         app:layout_constraintBottom_toBottomOf="@+id/back"
         app:layout_constraintEnd_toEndOf="@+id/back"

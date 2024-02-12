@@ -18,10 +18,7 @@ class HomiesFragment : Fragment() {
     ): View? {
         binding = FragmentHomiesBinding.inflate(inflater,container,false)
         binding.chestButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homiesFragment_to_chestfragment)
-        }
-        binding.settings.setOnClickListener {
-            findNavController().navigate(R.id.action_homiesFragment_to_settingFragment)
+            findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
         }
         return binding.root
     }

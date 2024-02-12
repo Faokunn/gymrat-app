@@ -6,20 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.gymrat.databinding.FragmentChestfragmentBinding
-import com.example.gymrat.databinding.FragmentHomiesBinding
+import com.example.gymrat.databinding.FragmentChest1Binding
 
-class Chestfragment : Fragment() {
-    private lateinit var binding: FragmentChestfragmentBinding
+class Chest1Fragment : Fragment() {
+    private lateinit var binding: FragmentChest1Binding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentChestfragmentBinding.inflate(inflater,container,false)
+        binding = FragmentChest1Binding.inflate(inflater,container,false)
         binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_chestfragment_to_homiesFragment)
+            findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
         }
         return binding.root
     }
-
 }
