@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".OptionEXFragment">
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/mainfont"
+        android:letterSpacing="0.3"
+        android:text="CHOOSE AN EXERCICE"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Chest"
+        android:layout_width="138dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:text="Chest Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about" />
+
+    <CheckBox
+        android:id="@+id/Back"
+        android:layout_width="138dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Back Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chest" />
+
+    <CheckBox
+        android:id="@+id/Shoulder"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Shoulder Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Back" />
+
+    <CheckBox
+        android:id="@+id/Triceps"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Triceps Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Shoulder" />
+
+    <CheckBox
+        android:id="@+id/Biceps"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Biceps Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Triceps" />
+
+    <CheckBox
+        android:id="@+id/Legs"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Legs Workout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Biceps" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="194dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Legs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

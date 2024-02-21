@@ -16,7 +16,7 @@ class Chest1Fragment : Fragment() {
     ): View? {
         binding = FragmentChest1Binding.inflate(inflater,container,false)
         binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
+            findNavController().navigate(R.id.action_chest1Fragment_to_homiesFragment)
         }
         return binding.root
     }

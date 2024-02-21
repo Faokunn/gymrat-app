@@ -7,17 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.databinding.FragmentBackBinding
-import com.example.gymrat.databinding.FragmentChest1Binding
+import com.example.gymrat.databinding.FragmentTricepsBinding
 
-class BackFragment : Fragment() {
-    private lateinit var binding: FragmentBackBinding
+class TricepsFragment : Fragment() {
+    private lateinit var binding: FragmentTricepsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBackBinding.inflate(inflater,container,false)
+        binding = FragmentTricepsBinding.inflate(inflater,container,false)
         binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_backFragment_to_homiesFragment)
+            findNavController().navigate(R.id.action_tricepsFragment_to_homiesFragment)
         }
         return binding.root
     }

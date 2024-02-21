@@ -57,11 +57,38 @@
         android:label="fragment_homies"
         tools:layout="@layout/fragment_homies" >
         <action
-            android:id="@+id/action_homiesFragment_to_chestfragment"
-            app:destination="@id/chestfragment" />
+            android:id="@+id/action_homiesFragment_to_chest1Fragment"
+            app:destination="@id/chest1Fragment" />
         <action
-            android:id="@+id/action_homiesFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
+            android:id="@+id/action_homiesFragment_to_backFragment"
+            app:destination="@id/backFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_shoulderFragment"
+            app:destination="@id/shoulderFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_tricepsFragment"
+            app:destination="@id/tricepsFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_bicepsFragment"
+            app:destination="@id/bicepsFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_legsFragment"
+            app:destination="@id/legsFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_changeFragment"
+            app:destination="@id/changeFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_homiesFragment_to_proteinFragment"
+            app:destination="@id/proteinFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_optionEXFragment"
+            app:destination="@id/optionEXFragment" />
     </fragment>
     <fragment
         android:id="@+id/intro0Fragment"
@@ -91,27 +118,94 @@
             app:destination="@id/homiesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/chestfragment"
-        android:name="com.example.gymrat.Chestfragment"
-        android:label="fragment_chestfragment"
-        tools:layout="@layout/fragment_chestfragment" >
-        <action
-            android:id="@+id/action_chestfragment_to_homiesFragment"
-            app:destination="@id/homiesFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.example.gymrat.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
-    <fragment
         android:id="@+id/backFragment"
         android:name="com.example.gymrat.BackFragment"
         android:label="fragment_back"
-        tools:layout="@layout/fragment_back" />
+        tools:layout="@layout/fragment_back" >
+        <action
+            android:id="@+id/action_backFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoulderFragment"
         android:name="com.example.gymrat.ShoulderFragment"
         android:label="fragment_shoulder"
-        tools:layout="@layout/fragment_shoulder" />
+        tools:layout="@layout/fragment_shoulder" >
+        <action
+            android:id="@+id/action_shoulderFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chest1Fragment"
+        android:name="com.example.gymrat.Chest1Fragment"
+        android:label="fragment_chest1"
+        tools:layout="@layout/fragment_chest1" >
+        <action
+            android:id="@+id/action_chest1Fragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tricepsFragment"
+        android:name="com.example.gymrat.TricepsFragment"
+        android:label="fragment_triceps"
+        tools:layout="@layout/fragment_triceps" >
+        <action
+            android:id="@+id/action_tricepsFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.gymrat.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/bicepsFragment"
+        android:name="com.example.gymrat.BicepsFragment"
+        android:label="fragment_biceps"
+        tools:layout="@layout/fragment_biceps" >
+        <action
+            android:id="@+id/action_bicepsFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/legsFragment"
+        android:name="com.example.gymrat.LegsFragment"
+        android:label="fragment_legs"
+        tools:layout="@layout/fragment_legs" >
+        <action
+            android:id="@+id/action_legsFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeFragment"
+        android:name="com.example.gymrat.ChangeFragment"
+        android:label="fragment_change"
+        tools:layout="@layout/fragment_change" >
+        <action
+            android:id="@+id/action_changeFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proteinFragment"
+        android:name="com.example.gymrat.ProteinFragment"
+        android:label="fragment_protein"
+        tools:layout="@layout/fragment_protein" >
+        <action
+            android:id="@+id/action_proteinFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionEXFragment"
+        android:name="com.example.gymrat.OptionEXFragment"
+        android:label="fragment_option_e_x"
+        tools:layout="@layout/fragment_option_e_x" >
+        <action
+            android:id="@+id/action_optionEXFragment_to_myprogramFragment"
+            app:destination="@id/myprogramFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myprogramFragment"
+        android:name="com.example.gymrat.MyprogramFragment"
+        android:label="fragment_myprogram"
+        tools:layout="@layout/fragment_myprogram" />
 </navigation>
