@@ -536,7 +536,6 @@
                     android:text="SARI-SARI\nPROTEIN"
                     android:textColor="@color/white"
                     android:textSize="8dp"
-                    app:layout_constraintEnd_toEndOf="createProgram"
                     app:layout_constraintHorizontal_bias="0.189"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/legs_button" />
@@ -547,7 +546,7 @@
                     android:layout_height="44dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="70dp"
-                    
+
                     android:background="@drawable/profile_edittext"
                     android:fontFamily="@font/mainfont"
                     android:text="CREATE\nPROGRAM"
