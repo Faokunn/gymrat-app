@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/mainfont"
-                    android:text="My Programs"
+                    android:text="My Program"
                     android:textColor="#A3FFFFFF"
                     android:textSize="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -120,8 +120,8 @@
 
                         <Button
                             android:id="@+id/cals_button"
-                            android:layout_width="139dp"
-                            android:layout_height="127dp"
+                            android:layout_width="320dp"
+                            android:layout_height="126dp"
                             android:layout_marginStart="34dp"
                             android:background="@drawable/profile_edittext"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -134,7 +134,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="52dp"
                             android:fontFamily="@font/mainfont"
-                            android:text="NULL"
+                            android:text="PROGRAM NAME"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             app:layout_constraintEnd_toEndOf="@+id/cals_button"
@@ -156,91 +156,7 @@
                             app:layout_constraintStart_toStartOf="@+id/cals_button"
                             app:layout_constraintTop_toBottomOf="@+id/cal_int" />
 
-                        <Button
-                            android:id="@+id/time_button"
-                            android:layout_width="139dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="24dp"
-                            android:background="@drawable/profile_edittext"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/cals_button"
-                            app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/time_int"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="52dp"
-                            android:fontFamily="@font/mainfont"
-                            android:text="NULL"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.047"
-                            app:layout_constraintStart_toStartOf="@+id/time_button"
-                            app:layout_constraintTop_toTopOf="@+id/time_button" />
-
-                        <TextView
-                            android:id="@+id/time_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mainfont"
-                            android:text="null"
-                            android:textColor="@color/white"
-                            android:textSize="11dp"
-                            app:layout_constraintEnd_toEndOf="@+id/time_button"
-                            app:layout_constraintHorizontal_bias="0.087"
-                            app:layout_constraintStart_toStartOf="@+id/time_button"
-                            app:layout_constraintTop_toBottomOf="@+id/cal_int" />
-
-                        <Button
-                            android:id="@+id/kilo_button"
-                            android:layout_width="139dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="24dp"
-                            android:background="@drawable/profile_edittext"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/time_button"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/kilo_int"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="11dp"
-                            android:layout_marginTop="52dp"
-                            android:fontFamily="@font/mainfont"
-                            android:text="NULL"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            app:layout_constraintStart_toStartOf="@+id/kilo_button"
-                            app:layout_constraintTop_toTopOf="@+id/kilo_button" />
-
-                        <TextView
-                            android:id="@+id/kilo_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/mainfont"
-                            android:text="null"
-                            android:textColor="@color/white"
-                            android:textSize="11dp"
-                            app:layout_constraintEnd_toEndOf="@+id/kilo_button"
-                            app:layout_constraintHorizontal_bias="0.087"
-                            app:layout_constraintStart_toStartOf="@+id/kilo_button"
-                            app:layout_constraintTop_toBottomOf="@+id/kilo_int" />
-
-                        <TextView
-                            android:id="@+id/asdasdad"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="132dp"
-                            android:fontFamily="@font/mainfont"
-                            android:text="Triceps\nWorkout"
-                            android:textColor="@color/white"
-                            android:visibility="invisible"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="@+id/kilo_button"
-                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
