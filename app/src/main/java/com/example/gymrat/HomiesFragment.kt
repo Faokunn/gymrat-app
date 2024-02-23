@@ -47,6 +47,10 @@ class HomiesFragment : Fragment() {
         binding.sariSari.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
         }
+        binding.createProgram.setOnClickListener {
+            findNavController().navigate(R.id.action_homiesFragment_to_optionExcerFragment)
+        }
+
 
         binding.settings.setOnClickListener {
             binding.navigationView.visibility = View.VISIBLE

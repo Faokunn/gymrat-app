@@ -18,6 +18,9 @@ class intro0Fragment : Fragment() {
         binding.signup.setOnClickListener {
             findNavController().navigate(R.id.action_intro0Fragment_to_intro1Fragment)
         }
+        binding.signin.setOnClickListener {
+            findNavController().navigate(R.id.action_intro0Fragment_to_loginFragment2)
+        }
         return binding.root
     }
 

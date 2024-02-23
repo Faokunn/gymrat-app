@@ -68,6 +68,7 @@
             android:layout_marginTop="25dp"
             android:fontFamily="@font/mainfont"
             android:text="Welcome Null"
+            android:layout_marginLeft="28dp"
             android:textColor="@color/white"
             android:textSize="18dp"
             app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -336,44 +337,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/back_variant" />
 
                 <Button
-                    android:id="@+id/abs_button"
-                    android:layout_width="321dp"
-                    android:layout_height="135dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/profile_edittext"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.469"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/back_button" />
-
-                <TextView
-                    android:id="@+id/abs_variant"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:fontFamily="@font/mainfont"
-                    android:text="8 Variant"
-                    android:textColor="#A3FFFFFF"
-                    android:textSize="8dp"
-                    app:layout_constraintEnd_toEndOf="@+id/abs_button"
-                    app:layout_constraintHorizontal_bias="0.049"
-                    app:layout_constraintStart_toStartOf="@+id/abs_button"
-                    app:layout_constraintTop_toTopOf="@+id/abs_button" />
-
-                <TextView
-                    android:id="@+id/abs_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mainfont"
-                    android:text="Abs"
-                    android:textColor="@color/white"
-                    android:textSize="30dp"
-                    app:layout_constraintEnd_toEndOf="@+id/abs_button"
-                    app:layout_constraintHorizontal_bias="0.053"
-                    app:layout_constraintStart_toStartOf="@+id/abs_button"
-                    app:layout_constraintTop_toBottomOf="@+id/abs_variant" />
-
-                <Button
                     android:id="@+id/biceps_button"
                     android:layout_width="321dp"
                     android:layout_height="135dp"
@@ -382,7 +345,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.469"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/abs_button" />
+                    app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
                 <TextView
                     android:id="@+id/biceps_variant"
@@ -529,14 +492,13 @@
                     android:id="@+id/sari_sari"
                     android:layout_width="121dp"
                     android:layout_height="45dp"
-                    android:layout_marginStart="66dp"
+                    android:layout_marginStart="65dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/profile_edittext"
                     android:fontFamily="@font/mainfont"
                     android:text="SARI-SARI\nPROTEIN"
                     android:textColor="@color/white"
                     android:textSize="8dp"
-                    app:layout_constraintEnd_toEndOf="createProgram"
                     app:layout_constraintHorizontal_bias="0.189"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/legs_button" />
@@ -547,7 +509,7 @@
                     android:layout_height="44dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="70dp"
-                    
+
                     android:background="@drawable/profile_edittext"
                     android:fontFamily="@font/mainfont"
                     android:text="CREATE\nPROGRAM"
@@ -565,7 +527,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/createProgram" />
+                    app:layout_constraintTop_toBottomOf="@+id/sari_sari" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

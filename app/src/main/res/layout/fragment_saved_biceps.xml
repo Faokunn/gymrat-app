@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".SavedBicepsFragment">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="356dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="-10dp"
+        android:alpha="0.50"
+        android:background="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="36dp"
+        android:layout_height="44dp"
+        android:background="#0000"
+        android:text="c"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toEndOf="@+id/editTextText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/resource_return"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.3"
+        android:textSize="30dp"
+        android:fontFamily="@font/mainfont"
+        android:text="NULL"
+        android:inputType="text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="230dp"
+                android:layout_height="198dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/barbellbiceps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/mainfont"
+                android:text="Exercise 1: Standing Barbell Curl\n\n
+*Stand with your feet shoulder-width apart, holding a barbell with an underhand grip (palms facing upward) and hands slightly wider than shoulder-width apart.\n\n
+*Keep your elbows close to your body and your upper arms stationary.\n\n
+*Exhale and curl the barbell upwards towards your shoulders, contracting your biceps.\n\n
+*Hold the contraction for a moment, then inhale and slowly lower the barbell back to the starting position.\n\n
+*Repeat for 3 sets of 10-12 reps."
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="SETS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/setInt"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/set"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/reps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="REPS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/set" />
+
+            <TextView
+                android:id="@+id/repsInt"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/reps"
+                app:layout_constraintTop_toBottomOf="@+id/set" />
+
+            <TextView
+                android:id="@+id/starting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="STARTING WEIGHT :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reps" />
+
+            <TextView
+                android:id="@+id/startingInt"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/starting"
+                app:layout_constraintTop_toBottomOf="@+id/reps" />
+
+            <ImageView
+                android:id="@+id/decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/alternatebiceps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/starting"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/press_form"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/mainfont"
+                android:text="Exercise: Alternating Dumbbell Curl\n\n
+*Stand with your feet shoulder-width apart, holding a dumbbell in each hand with your palms facing inward (neutral grip).\n\n
+*Keep your elbows close to your body and your upper arms stationary.\n\n
+*Exhale and curl one dumbbell upwards towards your shoulder while keeping the other arm stationary.\n\n
+*Hold the contraction for a moment, then inhale and slowly lower the dumbbell back to the starting position.\n\n
+*Alternate arms and repeat for 3 sets of 12-15 reps per arm."
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/decline" />
+
+            <TextView
+                android:id="@+id/set2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="SETS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/press_form" />
+
+            <TextView
+                android:id="@+id/setInt2"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/set"
+                app:layout_constraintTop_toBottomOf="@+id/press_form" />
+
+            <TextView
+                android:id="@+id/reps2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="REPS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/set2" />
+
+            <TextView
+                android:id="@+id/repsInt2"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/reps2"
+                app:layout_constraintTop_toBottomOf="@+id/set2" />
+
+            <TextView
+                android:id="@+id/starting2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="STARTING WEIGHT :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reps2" />
+
+            <TextView
+                android:id="@+id/startingInt2"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/starting2"
+                app:layout_constraintTop_toBottomOf="@+id/reps2" />
+
+            <ImageView
+                android:id="@+id/standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/hammerbiceps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startingInt2"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/standard_form"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/mainfont"
+                android:text="Exercise 3: Hammer Curl\n\n
+*Stand with your feet shoulder-width apart, holding a dumbbell in each hand with your palms facing inward (neutral grip).\n\n
+*Keep your elbows close to your body and your upper arms stationary.\n\n
+*Exhale and curl both dumbbells upwards towards your shoulders simultaneously, keeping your palms facing inward throughout the movement.\n\n
+*Hold the contraction for a moment, then inhale and slowly lower the dumbbells back to the starting position.\n\n
+*Repeat for 3 sets of 10-12 reps."
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/standard" />
+
+            <TextView
+                android:id="@+id/set3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="SETS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/standard_form" />
+
+            <TextView
+                android:id="@+id/setInt4"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/set3"
+                app:layout_constraintTop_toBottomOf="@+id/standard_form" />
+
+            <TextView
+                android:id="@+id/reps3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="REPS :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/set3" />
+
+            <TextView
+                android:id="@+id/repsInt4"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/reps3"
+                app:layout_constraintTop_toBottomOf="@+id/set3" />
+
+            <TextView
+                android:id="@+id/starting3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="STARTING WEIGHT :"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reps3" />
+
+            <TextView
+                android:id="@+id/startingInt4"
+                android:layout_width="94dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="16dp"
+                android:text="null"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/starting3"
+                app:layout_constraintTop_toBottomOf="@+id/reps3" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/profile_edittext"
+                android:text="Delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/starting3" />
+
+            <TextView
+                android:id="@+id/asda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mainfont"
+                android:text="asd"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/save" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

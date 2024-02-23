@@ -52,7 +52,7 @@
         android:layout_height="85dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
-        android:src="@drawable/dumble"
+        android:src="@drawable/deadliftb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -75,7 +75,7 @@
         android:layout_height="85dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="44dp"
-        android:src="@drawable/dumble"
+        android:src="@drawable/widegripseatedback"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -98,7 +98,7 @@
         android:layout_height="85dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="44dp"
-        android:src="@drawable/dumble"
+        android:src="@drawable/latfocusback"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageVie9" />
 

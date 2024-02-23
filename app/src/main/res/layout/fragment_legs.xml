@@ -80,7 +80,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/dumble"
+                android:src="@drawable/barbellhip"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,7 +103,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/dumble"
+                android:src="@drawable/barbell_sqats"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -126,7 +126,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/dumble"
+                android:src="@drawable/romaniandeadlift"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageVie9" />
 
@@ -149,7 +149,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/dumble"
+                android:src="@drawable/calvesraises"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/a_img" />
 
