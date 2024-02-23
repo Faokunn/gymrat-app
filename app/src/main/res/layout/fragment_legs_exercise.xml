@@ -120,7 +120,7 @@
 
             <EditText
                 android:id="@+id/setInt"
-                android:layout_width="94dp"
+                android:layout_width="95dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="16dp"
                 android:ems="10"
