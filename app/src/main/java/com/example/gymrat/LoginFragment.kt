@@ -28,6 +28,9 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater,container,false)
+        binding.register.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment2_to_intro1Fragment)
+        }
         binding.signInButton.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
