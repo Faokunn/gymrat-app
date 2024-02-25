@@ -1,4 +1,4 @@
-package com.example.gmyrat.model
+package com.example.gymrat.model
 data class UserData (
     var userName:String
 )

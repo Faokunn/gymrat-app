@@ -5,10 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.gmyrat.model.UserData
 import com.example.gymrat.databinding.FragmentOptionExcerBinding
+import com.example.gymrat.model.UserData
 
 class OptionExcerFragment : Fragment() {
     private lateinit var binding: FragmentOptionExcerBinding

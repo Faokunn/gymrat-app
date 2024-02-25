@@ -7,7 +7,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     private const val BASE_URL = "https://gymrat-4acc1b203554.herokuapp.com/"
-
     private val okHttpClient = OkHttpClient.Builder()
             .addInterceptor{chain ->
                 val original = chain.request()

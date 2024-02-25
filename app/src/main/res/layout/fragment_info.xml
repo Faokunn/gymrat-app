@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#121323"
     tools:context=".InfoFragment">
 
     <TextView
@@ -154,7 +154,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#121323"
         android:fontFamily="@font/mainfont"
         android:text="return"
         android:textColor="#707070"
