@@ -20,12 +20,6 @@ class OptionExcerFragment : Fragment() {
         binding = FragmentOptionExcerBinding.inflate(inflater,container,false)
         userList = ArrayList()
 
-        binding.Chest.setOnClickListener {
-            findNavController().navigate(R.id.action_optionExcerFragment_to_chestExerciseeFragment)
-        }
-        binding.Back.setOnClickListener {
-            findNavController().navigate(R.id.action_optionExcerFragment_to_backExerciseFragment)
-        }
         binding.save.setOnClickListener {
             findNavController().navigate(R.id.action_optionExcerFragment_to_myprogramFragment)
         }

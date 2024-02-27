@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#121323"
     tools:context=".AgeFragment">
-
 
     <TextView
         android:id="@+id/textView"
@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -45,47 +45,54 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.02">
+        app:layout_constraintVertical_bias="0.02" />
 
-    </TextView>
+    <!-- Replace the EditText with the appropriate ID -->
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/button_color"
+        android:fontFamily="@font/mainfont"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="150sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/back_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="4dp"
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/mainfont"
         android:text="Back"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/continue_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.408">
-
-    </Button>
+        app:layout_constraintEnd_toStartOf="@+id/continue_button"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="156dp"
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/mainfont"
         android:text="Continue"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.408">
-
-    </Button>
-
+        app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

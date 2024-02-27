@@ -29,6 +29,7 @@ class InfoFragment : Fragment() {
             val cpassword = binding.confirmPassword.text.toString().trim()
             val email = binding.email.text.toString().trim()
             val gender = requireArguments().getString("gender").toString()
+            val age = requireArguments().getString("age").toString()
 
             if(nickname.isEmpty()){
                 binding.nickname.error = "Nickname Required"
@@ -62,21 +63,19 @@ class InfoFragment : Fragment() {
                 binding.email.requestFocus()
                 return@setOnClickListener
             }
-            RetrofitClient.instance.createUser(email, password, cpassword, nickname, "10", gender, "Program").enqueue(object :
+            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age, gender, "Program").enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
                     if (response.isSuccessful) {
                         Toast.makeText(context, response.body()?.message, Toast.LENGTH_LONG).show()
                         findNavController().navigate(R.id.action_infoFragment_to_loginFragment2)
                     } else {
-                        // Handle server error or existing email error
                         val errorMessage = response.errorBody()?.string() ?: "Unknown error"
                         Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
                     }
                 }
 
                 override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
-                    // Handle failure, e.g., show an error message
                     Toast.makeText(context, "Email Already Exist", Toast.LENGTH_LONG).show()
                 }
             })

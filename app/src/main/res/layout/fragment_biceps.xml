@@ -9,11 +9,11 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="356dp"
-        android:layout_height="120dp"
+        android:layout_width="414dp"
+        android:layout_height="121dp"
         android:layout_marginTop="-10dp"
         android:alpha="0.50"
-        android:background="#D9D9D9"
+        android:background="#74747A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginStart="40dp"
         android:fontFamily="@font/mainfont"
         android:letterSpacing="0.3"
-        android:textColor="@color/white"
+        android:textColor="#F2F3F4"
         android:text="BICEPS"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
@@ -60,200 +60,17 @@
         app:layout_constraintTop_toTopOf="@+id/back"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="126dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/indinedbench"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="106dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="27dp"
-        android:fontFamily="@font/mainfont"
-        android:text="Long head\n01. Inclined bench curl 1"
-        android:textColor="@color/white"
-        android:textSize="8dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageVie9"
-        android:layout_width="126dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/concentrationcurl"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <TextView
-        android:id="@+id/push_txt"
-        android:layout_width="115dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/mainfont"
-        android:text="Short head\n01. Concentration curl 1"
-        android:textColor="@color/white"
-        android:textSize="8dp"
-        app:layout_constraintStart_toEndOf="@+id/imageVie9"
-        app:layout_constraintTop_toTopOf="@+id/imageVie9" />
-
-    <ImageView
-        android:id="@+id/a_img"
-        android:layout_width="126dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/hammercurls"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageVie9" />
-
-    <TextView
-        android:id="@+id/lower"
-        android:layout_width="94dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/mainfont"
-        android:text="Brachialis\n01. Hammer Curls 1"
-        android:textColor="@color/white"
-        android:textSize="8dp"
-        app:layout_constraintStart_toEndOf="@+id/a_img"
-        app:layout_constraintTop_toTopOf="@+id/a_img" />
-
-    <TextView
-        android:id="@+id/popular"
-        android:layout_width="84dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/mainfont"
-        android:text="POPULAR\nPROGRAMS"
-        android:textColor="@color/white"
-        android:textSize="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/a_img" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView2"
-        android:layout_width="375dp"
-        android:layout_height="182dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popular">
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/bworkout"
-                android:layout_width="165dp"
-                android:layout_height="142dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/popular"
-                android:clipToOutline="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/bworkout_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/mainfont"
-                android:text="Legs\nWorkout"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/bworkout"
-                app:layout_constraintEnd_toEndOf="@+id/bworkout"
-                app:layout_constraintHorizontal_bias="0.129"
-                app:layout_constraintStart_toStartOf="@+id/bworkout"
-                app:layout_constraintTop_toTopOf="@+id/bworkout"
-                app:layout_constraintVertical_bias="0.782" />
-
-            <Button
-                android:id="@+id/sworkout"
-                android:layout_width="165dp"
-                android:layout_height="142dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/popular"
-                android:clipToOutline="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/bworkout"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/sworkout_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/mainfont"
-                android:text="Chest\nWorkout"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/sworkout"
-                app:layout_constraintEnd_toEndOf="@+id/sworkout"
-                app:layout_constraintHorizontal_bias="0.129"
-                app:layout_constraintStart_toStartOf="@+id/sworkout"
-                app:layout_constraintTop_toTopOf="@+id/sworkout"
-                app:layout_constraintVertical_bias="0.782" />
-
-            <Button
-                android:id="@+id/tworkout"
-                android:layout_width="165dp"
-                android:layout_height="142dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/popular"
-                android:clipToOutline="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/sworkout"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/tworkout_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/mainfont"
-                android:text="Tricep\nWorkout"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/tworkout"
-                app:layout_constraintEnd_toEndOf="@+id/tworkout"
-                app:layout_constraintHorizontal_bias="0.129"
-                app:layout_constraintStart_toStartOf="@+id/tworkout"
-                app:layout_constraintTop_toTopOf="@+id/tworkout"
-                app:layout_constraintVertical_bias="0.782" />
-
-            <TextView
-                android:id="@+id/asdasdad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="132dp"
-                android:fontFamily="@font/mainfont"
-                android:text="Triceps\nWorkout"
-                android:textColor="@color/white"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tworkout"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

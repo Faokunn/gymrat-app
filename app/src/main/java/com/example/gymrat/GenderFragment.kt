@@ -18,17 +18,17 @@ class GenderFragment : Fragment() {
         binding = FragmentGenderBinding.inflate(inflater,container,false)
         binding.maleButton.setOnClickListener {
 
-            findNavController().navigate(R.id.action_genderFragment_to_infoFragment2, Bundle().apply {
+            findNavController().navigate(R.id.action_genderFragment_to_ageFragment, Bundle().apply {
                 putString("gender", "MALE")
             })
         }
         binding.femaleButton.setOnClickListener {
-            findNavController().navigate(R.id.action_genderFragment_to_infoFragment2, Bundle().apply {
+            findNavController().navigate(R.id.action_genderFragment_to_ageFragment, Bundle().apply {
                 putString("gender", "FEMALE")
             })
         }
         binding.rather.setOnClickListener {
-            findNavController().navigate(R.id.action_genderFragment_to_infoFragment2, Bundle().apply {
+            findNavController().navigate(R.id.action_genderFragment_to_ageFragment, Bundle().apply {
                 putString("gender", "RNS")
             })
         }

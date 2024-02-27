@@ -77,3 +77,4 @@ data class Leg(
     val reps:Int,
     val weight:Int,
 )
+
