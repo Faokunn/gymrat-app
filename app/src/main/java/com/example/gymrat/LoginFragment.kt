@@ -1,6 +1,8 @@
 package com.example.gymrat
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.LoginResponse
+import com.example.gymrat.Models.ProgramResponse
 import com.example.gymrat.api.RetrofitClient
 import com.example.gymrat.databinding.FragmentInfoBinding
 import com.example.gymrat.databinding.FragmentLoginBinding
@@ -42,9 +45,26 @@ class LoginFragment : Fragment() {
                             if (response.isSuccessful) {
                                 val token = response.body()?.token
                                 val userId = response.body()?.data?.id
-                                if (userId != null) {
-                                    AuthManager.instance.setUserid(userId)
-                                }
+                                val call2 = RetrofitClient.instance.getUserProgram(userId!!)
+                                call2.enqueue(object : Callback<ProgramResponse> {
+                                    @SuppressLint("SetTextI18n")
+                                    override fun onResponse(call: Call<ProgramResponse>, response: Response<ProgramResponse>) {
+                                        if (response.isSuccessful) {
+                                            val programResponse = response.body()
+                                            val programId = programResponse?.program?.id
+                                            Toast.makeText(context, "$programId", Toast.LENGTH_SHORT).show()
+                                            if (programId != null) {
+                                                AuthManager.instance.setProgramId(programId)
+                                            }
+                                        } else {
+                                            Toast.makeText(context, "Failed to fetch user program", Toast.LENGTH_SHORT).show()
+                                        }
+                                    }
+                                    override fun onFailure(call: Call<ProgramResponse>, t: Throwable) {
+                                    }
+                                })
+
+                                AuthManager.instance.setUserid(userId)
                                 Toast.makeText(context, response.body()?.message, Toast.LENGTH_LONG).show()
                                 if (token != null) {
                                     AuthManager.instance.setAuthToken(token)

@@ -1,10 +1,12 @@
 package com.example.gymrat.Models
 
+import com.example.gymrat.model.ProgramExerciseData
+
 data class User(
     val id: Int,
     val email: String,
     val profile: ProfileResponse,
-    val program: Program
+    val program: Program?
 )
 data class Profile(
     val id:Int,
@@ -15,13 +17,7 @@ data class Profile(
 
 data class Program(
     val id:Int,
-    val title:String,
-    val chest: Chest,
-    val shoulder: Shoulder,
-    val tricep: Tricep,
-    val back: Back,
-    val bicep: Bicep,
-    val leg: Leg,
+    val title:String
 )
 
 data class Chest(

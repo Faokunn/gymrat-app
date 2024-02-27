@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.ProfileResponse
+import com.example.gymrat.Models.ProgramResponse
 import com.example.gymrat.api.RetrofitClient
 import com.example.gymrat.databinding.FragmentHomiesBinding
 import com.google.android.material.navigation.NavigationView
@@ -28,7 +29,6 @@ class HomiesFragment : Fragment() {
     private lateinit var binding: FragmentHomiesBinding
     private lateinit var drawerLayout: DrawerLayout
     lateinit var toggle: ActionBarDrawerToggle
-    val authToken = AuthManager.instance.authToken
     private val user_id = AuthManager.instance.userid
 
     override fun onCreateView(
@@ -36,9 +36,10 @@ class HomiesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomiesBinding.inflate(inflater,container,false)
-
-        val userId = user_id
-        val call = RetrofitClient.instance.getUserProfile(userId!!)
+        val user_id = AuthManager.instance.userid
+        val user_id2 = AuthManager.instance.userid
+        val call = RetrofitClient.instance.getUserProfile(user_id!!)
+        val call2 = RetrofitClient.instance.getUserProgram(user_id2!!)
         call.enqueue(object : Callback<ProfileResponse> {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<ProfileResponse>, response: Response<ProfileResponse>) {
@@ -52,9 +53,25 @@ class HomiesFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<ProfileResponse>, t: Throwable) {
-                // Handle failure
             }
         })
+        call2.enqueue(object : Callback<ProgramResponse> {
+            @SuppressLint("SetTextI18n")
+            override fun onResponse(call: Call<ProgramResponse>, response: Response<ProgramResponse>) {
+                if (response.isSuccessful) {
+                    val programResponse = response.body()
+                    val programTitle = programResponse?.program?.title
+                    binding.calInt.text = "$programTitle"
+                } else {
+                    Toast.makeText(context, "Failed to fetch user program", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ProgramResponse>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+
         binding.chestButton.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
         }
@@ -110,6 +127,7 @@ class HomiesFragment : Fragment() {
                     findNavController().navigate(R.id.action_homiesFragment_to_aboutFragment)
                 }
                 R.id.nav_logout -> {
+                    AuthManager.instance.clearuserId()
                     findNavController().navigate(R.id.action_homiesFragment_to_loginFragment2)
                 }
             }

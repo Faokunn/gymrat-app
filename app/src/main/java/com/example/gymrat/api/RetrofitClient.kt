@@ -26,13 +26,5 @@ object RetrofitClient {
         retrofit.create(Api::class.java)
     }
 
-    fun create(): Api {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        return retrofit.create(Api::class.java)
-    }
 
 }

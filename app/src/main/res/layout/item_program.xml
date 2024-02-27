@@ -43,7 +43,7 @@
 
             <TextView
                 android:fontFamily="@font/mainfont"
-                android:id="@+id/groupMuscleTextView"
+                android:id="@+id/sets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"
@@ -51,39 +51,20 @@
 
             <TextView
                 android:fontFamily="@font/mainfont"
-                android:id="@+id/targetMuscleTextView"
+                android:id="@+id/reps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F2F3F4"
+                android:textSize="15sp" />
+            <TextView
+                android:fontFamily="@font/mainfont"
+                android:id="@+id/weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"
                 android:textSize="15sp" />
 
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <Button
-                    android:fontFamily="@font/mainfont"
-                    android:id="@+id/formButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#494b60"
-                    android:text="Form"
-                    android:textSize="15sp"
-                    android:textColor="#F2F3F4" />
-
-                <Button
-                    android:id="@+id/addButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#494b60"
-                    android:fontFamily="@font/mainfont"
-                    android:text="Add"
-                    android:textColor="#F2F3F4"
-                    android:textSize="15sp" />
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

@@ -5,6 +5,8 @@ class AuthManager {
         private set
     var userid: Int? = null
         private set
+    var programid: Int? = null
+        private set
 
     companion object {
         val instance by lazy { AuthManager() }
@@ -19,7 +21,14 @@ class AuthManager {
 
     }
 
+    fun setProgramId(id: Int) {
+        programid = id
+    }
+
     fun clearAuthToken() {
         authToken = null
+    }
+    fun clearuserId() {
+        userid = null
     }
 }
