@@ -63,7 +63,7 @@ class InfoFragment : Fragment() {
                 binding.email.requestFocus()
                 return@setOnClickListener
             }
-            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age, gender, "Program").enqueue(object :
+            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age, gender, "$nickname's Program").enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
                     if (response.isSuccessful) {

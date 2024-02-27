@@ -25,10 +25,10 @@ class AgeFragment : Fragment() {
         binding.continueButton.setOnClickListener {
             val ageInput = binding.ageEditText.text.toString()
             if (ageInput.isNotBlank()) {
-                val age = ageInput.toInt()
+                val age = ageInput
                 findNavController().navigate(R.id.action_ageFragment_to_infoFragment, Bundle().apply {
                     putString("gender", gender)
-                    putInt("age", age)
+                    putString("age", age)
                 })
             } else {
                 Toast.makeText(requireContext(), "Please enter your age", Toast.LENGTH_SHORT).show()
