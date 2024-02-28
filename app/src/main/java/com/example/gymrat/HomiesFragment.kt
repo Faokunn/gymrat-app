@@ -71,7 +71,8 @@ class HomiesFragment : Fragment() {
                 TODO("Not yet implemented")
             }
         })
-
+        binding.myPrograms.setOnClickListener {
+        }
         binding.chestButton.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
         }

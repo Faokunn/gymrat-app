@@ -8,6 +8,7 @@ import com.example.gymrat.Models.ProgramExercisesResponse
 import com.example.gymrat.Models.ProgramResponse
 import com.example.gymrat.model.ExercisesData
 import retrofit2.Call
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -25,8 +26,10 @@ interface Api {
         @Field("confirm_password") cpassword: String,
         @Field("profile[nickname]") nickname: String,
         @Field("profile[age]") age: String,
+        @Field("profile[goal]") goal: String,
         @Field("profile[gender]") gender: String,
-        @Field("program[title]") title: String
+        @Field("program[title]") title: String,
+        @Field("program[goal]") pgoal: String
     ): Call<DefaultResponse>
 
     @FormUrlEncoded
@@ -37,10 +40,22 @@ interface Api {
     ):Call<LoginResponse>
 
     @FormUrlEncoded
-    @POST("api/{groupMuscle}")
+    @PUT("api/ProgramExercises/{id}")
+    fun updateProgramExercise(
+        @Path("id") id: Int,
+        @Field("sets") sets: Int,
+        @Field("reps") reps: Int,
+        @Field("weight") weight: Int
+    ): Call<LoginResponse>
+
+    @DELETE("api/ProgramExercises/{id}")
+    fun deleteProgramExercise(@Path("id") id: Int): Call<LoginResponse>
+
+    @FormUrlEncoded
+    @POST("api/ProgramExercises")
     fun exerciseAdd(
-        @Path("groupMuscle") groupMuscle: String,
         @Field("exercise") exercise: String,
+        @Field("group_muscle") groupMuscle: String,
         @Field("target_muscle") targetMuscle: String,
         @Field("sets") sets: Int,
         @Field("reps") reps: Int,
@@ -62,5 +77,8 @@ interface Api {
 
     @GET("api/exercise/{groupMuscle}")
     fun getExercises(@Path("groupMuscle") groupMuscle: String): Call<ExercisesResponse>
+
+    @GET("api/ProgramExercises/{program_id}")
+    fun getProgramExercises(@Path("program_id") programId: Int): Call<ProgramExercisesResponse>
 
 }

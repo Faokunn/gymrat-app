@@ -27,7 +27,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         val exerciseNameTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
         val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
         val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
-        val properFormTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
+        val environmentTextView: TextView = itemView.findViewById(R.id.environmentTextView)
         val formButton: Button = itemView.findViewById(R.id.formButton)
         val addButton: Button = itemView.findViewById(R.id.addButton)
 
@@ -43,6 +43,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         holder.exerciseNameTextView.text = exercise.exerciseName
         holder.groupMuscleTextView.text = exercise.groupMuscle
         holder.targetMuscleTextView.text = exercise.targetMuscle
+        holder.environmentTextView.text = exercise.environment
 
         holder.formButton.setOnClickListener {
             showFormDialog(holder.itemView.context, exercise.properForm)
@@ -113,7 +114,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.groupMuscle.lowercase(),exercise.exerciseName, exercise.targetMuscle, sets, reps, weight, programid)
+        api.exerciseAdd(exercise.groupMuscle,exercise.exerciseName, exercise.targetMuscle, sets, reps, weight, programid)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {

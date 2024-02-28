@@ -19,8 +19,9 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="125dp"
-            android:layout_height="124dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="132dp"
+            android:layout_height="119dp"
             android:layout_marginEnd="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/gymrat_logo" />
@@ -52,6 +53,14 @@
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/targetMuscleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F2F3F4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:fontFamily="@font/mainfont"
+                android:id="@+id/environmentTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"

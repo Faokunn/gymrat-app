@@ -1,7 +1,8 @@
 package com.example.gymrat.Models
 
 import com.example.gymrat.model.ProgramExerciseData
+import com.google.gson.annotations.SerializedName
 
 data class ProgramExercisesResponse(
-    val exercises: List<ProgramExerciseData>
+    @SerializedName("programexercises") val exercises: List<ProgramExerciseData>
 )
