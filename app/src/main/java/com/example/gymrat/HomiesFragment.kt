@@ -71,7 +71,8 @@ class HomiesFragment : Fragment() {
                 TODO("Not yet implemented")
             }
         })
-        binding.myPrograms.setOnClickListener {
+        binding.calsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
         }
         binding.chestButton.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_chest1Fragment)
@@ -93,9 +94,6 @@ class HomiesFragment : Fragment() {
         }
         binding.sariSari.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
-        }
-        binding.createProgram.setOnClickListener {
-            findNavController().navigate(R.id.action_homiesFragment_to_optionExcerFragment)
         }
 
 

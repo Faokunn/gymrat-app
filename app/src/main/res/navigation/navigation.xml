@@ -87,8 +87,8 @@
             android:id="@+id/action_homiesFragment_to_proteinFragment"
             app:destination="@id/proteinFragment" />
         <action
-            android:id="@+id/action_homiesFragment_to_optionExcerFragment"
-            app:destination="@id/optionExcerFragment" />
+            android:id="@+id/action_homiesFragment_to_myprogramFragment"
+            app:destination="@id/myprogramFragment" />
     </fragment>
     <fragment
         android:id="@+id/intro0Fragment"
@@ -205,15 +205,6 @@
         android:name="com.example.gymrat.MyprogramFragment"
         android:label="fragment_myprogram"
         tools:layout="@layout/fragment_myprogram" />
-    <fragment
-        android:id="@+id/optionExcerFragment"
-        android:name="com.example.gymrat.OptionExcerFragment"
-        android:label="fragment_option_excer"
-        tools:layout="@layout/fragment_option_excer" >
-        <action
-            android:id="@+id/action_optionExcerFragment_to_myprogramFragment"
-            app:destination="@id/myprogramFragment" />
-    </fragment>
     <fragment
         android:id="@+id/ageFragment"
         android:name="com.example.gymrat.AgeFragment"

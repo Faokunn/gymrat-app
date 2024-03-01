@@ -6,15 +6,17 @@ import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.Models.ProfileResponse
 import com.example.gymrat.Models.ProgramExercisesResponse
 import com.example.gymrat.Models.ProgramResponse
-import com.example.gymrat.model.ExercisesData
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
+
 
 interface Api {
 
@@ -81,4 +83,15 @@ interface Api {
     @GET("api/ProgramExercises/{program_id}")
     fun getProgramExercises(@Path("program_id") programId: Int): Call<ProgramExercisesResponse>
 
+    @PUT("api/progressive-overload/{program_id}")
+    fun progressiveOverload(@Path("program_id") programId: Int): Call<Void>
+
+    @FormUrlEncoded
+    @POST("api/user/change-password")
+    fun changePassword(
+        @Header("Authorization") authorization: String,
+        @Field("current_password") currentPassword: String?,
+        @Field("new_password") newPassword: String?,
+        @Field("confirm_new_password") confirmNewPassword: String?
+    ): Call<DefaultResponse>
 }

@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProgramExercisesAdapter(private var programExercises: List<ProgramExerciseData>) : RecyclerView.Adapter<ProgramExercisesAdapter.ProgramExerciseViewHolder>() {
+class ProgramExercisesAdapter(private var programExercises: List<ProgramExerciseData>, private val updateListener: ProgramExerciseUpdateListener) : RecyclerView.Adapter<ProgramExercisesAdapter.ProgramExerciseViewHolder>() {
 
 
     class ProgramExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -119,17 +119,13 @@ class ProgramExercisesAdapter(private var programExercises: List<ProgramExercise
         RetrofitClient.instance.updateProgramExercise(id, sets, reps, weight).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
-                    // Handle successful response
-                    // You may want to refresh the data or show a message
+
+                    updateListener.onProgramExerciseUpdated()
                 } else {
-                    // Handle unsuccessful response
-                    // You may want to show an error message
                 }
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                // Handle failure
-                // You may want to show an error message
             }
         })
     }
@@ -138,18 +134,18 @@ class ProgramExercisesAdapter(private var programExercises: List<ProgramExercise
         RetrofitClient.instance.deleteProgramExercise(id).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
-                    // Handle successful response
-                    // You may want to refresh the data or show a message
+                    updateListener.onProgramExerciseUpdated()
                 } else {
-                    // Handle unsuccessful response
-                    // You may want to show an error message
+
                 }
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                // Handle failure
-                // You may want to show an error message
+
             }
         })
+    }
+    interface ProgramExerciseUpdateListener {
+        fun onProgramExerciseUpdated()
     }
 }

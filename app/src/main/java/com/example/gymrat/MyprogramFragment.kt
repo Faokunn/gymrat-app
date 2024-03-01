@@ -1,13 +1,17 @@
 package com.example.gymrat
 
 import ProgramExercisesAdapter
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gymrat.Models.AuthManager
@@ -19,7 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class MyprogramFragment : Fragment() {
+class MyprogramFragment : Fragment(), ProgramExercisesAdapter.ProgramExerciseUpdateListener {
 
     private lateinit var binding: FragmentMyprogramBinding
     private lateinit var programExercisesAdapter: ProgramExercisesAdapter
@@ -30,18 +34,20 @@ class MyprogramFragment : Fragment() {
     ): View? {
         binding = FragmentMyprogramBinding.inflate(inflater, container, false)
 
-        // Initialize RecyclerView
         val recyclerView: RecyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        // Initialize and set up the adapter with a mutable list
-        programExercisesAdapter = ProgramExercisesAdapter(mutableListOf())
+        programExercisesAdapter = ProgramExercisesAdapter(mutableListOf(), this)
         recyclerView.adapter = programExercisesAdapter
-
-        // Fetch program exercises data
         fetchProgramExercisesData()
 
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.overloadButton.setOnClickListener {
+            showOverloadDialog()
+        }
     }
 
     private fun fetchProgramExercisesData() {
@@ -85,4 +91,63 @@ class MyprogramFragment : Fragment() {
             }
         })
     }
+    @SuppressLint("SetTextI18n")
+    private fun showOverloadDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle("Progressive Overload")
+
+        val layout = LinearLayout(requireContext())
+        layout.orientation = LinearLayout.VERTICAL
+
+        val checkBox1 = CheckBox(requireContext())
+        checkBox1.text = "2 Weeks Already Passed"
+        layout.addView(checkBox1)
+
+        val checkBox2 = CheckBox(requireContext())
+        checkBox2.text = "Can Do More than Your Reps"
+        layout.addView(checkBox2)
+
+        val checkBox3 = CheckBox(requireContext())
+        checkBox3.text = "Weight Feels Lighter"
+        layout.addView(checkBox3)
+
+        builder.setView(layout)
+
+        builder.setPositiveButton("Overload") { _, _ ->
+            if (checkBox1.isChecked && checkBox2.isChecked && checkBox3.isChecked) {
+                RetrofitClient.instance.progressiveOverload(AuthManager.instance.programid!!).enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        if (response.isSuccessful) {
+                            Toast.makeText(requireContext(), "Overload Successful!", Toast.LENGTH_SHORT).show()
+                            fetchProgramExercisesData()
+                        } else {
+                            Log.e("OverloadError", "HTTP Status Code: ${response.code()}")
+                            Log.e("OverloadError", "Error Body: ${response.errorBody()?.string()}")
+
+                            // Display a general error message
+                            Toast.makeText(requireContext(), "Failed to overload", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Log.e("OverloadError", "Failed to overload", t)
+                        Toast.makeText(requireContext(), "Network error. Please try again later.", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            } else {
+                Toast.makeText(requireContext(), "All requirements must be met to Progressive Overload", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        builder.setNegativeButton("Cancel") { _, _ ->
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+    override fun onProgramExerciseUpdated() {
+        fetchProgramExercisesData()
+    }
+
+
 }
