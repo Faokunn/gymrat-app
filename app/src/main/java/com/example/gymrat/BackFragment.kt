@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,6 +32,23 @@ class BackFragment : Fragment() {
         exerciseAdapter = ExerciseAdapter(emptyList())
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = exerciseAdapter
+
+        val backMuscles = resources.getStringArray(R.array.Back_Muscle)
+        val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, backMuscles)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val spinner = binding.exerciseTypeSpinner
+        spinner.adapter = spinnerAdapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                fetchData()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
         binding.back.setOnClickListener {
             findNavController().navigate(R.id.action_backFragment_to_homiesFragment)
         }
@@ -44,7 +63,10 @@ class BackFragment : Fragment() {
                 if (response.isSuccessful) {
                     val exercisesResponse = response.body()
                     val exercises = exercisesResponse?.exercises ?: emptyList()
-                    exerciseAdapter.setData(exercises)
+                    val selectedExerciseType = binding.exerciseTypeSpinner.selectedItem.toString()
+                    val filteredExercises = exercises.filter { it.targetMuscle == selectedExerciseType }
+
+                    exerciseAdapter.setData(filteredExercises)
                 } else {
                     handleApiError(response.code())
                 }

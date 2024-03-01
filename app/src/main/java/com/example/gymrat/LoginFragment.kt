@@ -52,9 +52,13 @@ class LoginFragment : Fragment() {
                                         if (response.isSuccessful) {
                                             val programResponse = response.body()
                                             val programId = programResponse?.program?.id
+                                            val programGoal = programResponse?.program?.goal
                                             Toast.makeText(context, "$programId", Toast.LENGTH_SHORT).show()
                                             if (programId != null) {
                                                 AuthManager.instance.setProgramId(programId)
+                                            }
+                                            if (programGoal != null) {
+                                                AuthManager.instance.setGoal(programGoal)
                                             }
                                         } else {
                                             Toast.makeText(context, "Failed to fetch user program", Toast.LENGTH_SHORT).show()

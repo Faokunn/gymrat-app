@@ -31,6 +31,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         val formButton: Button = itemView.findViewById(R.id.formButton)
         val addButton: Button = itemView.findViewById(R.id.addButton)
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
@@ -86,8 +87,11 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
             val reps = repsEditText.text.toString().toIntOrNull() ?: 0
             val weight = weightEditText.text.toString().toIntOrNull() ?: 0
             val programId = AuthManager.instance.programid
+            val goal = AuthManager.instance.goal
             if (programId != null) {
-                addExerciseToProgram(context, exercise, sets, reps, weight, programId)
+                if (goal != null) {
+                    addExerciseToProgram(context, exercise, sets, reps, weight, goal,programId)
+                }
             }
             else{
                 Toast.makeText(context, "here", Toast.LENGTH_SHORT).show()
@@ -110,17 +114,19 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         sets: Int,
         reps: Int,
         weight: Int,
+        goal: String,
         programid: Int
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.groupMuscle,exercise.exerciseName, exercise.targetMuscle, sets, reps, weight, programid)
+        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,goal ,programid)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
                         Toast.makeText(context, "${exercise.exerciseName} Added To Your Program", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(context, "Failed to add exercise. Please try again.", Toast.LENGTH_SHORT).show()
+                        val token = response.body()?.message
+                        Toast.makeText(context, "$token", Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -132,7 +138,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(newExercises: List<ExercisesData>) {
-        exercises = newExercises.sortedBy { it.targetMuscle }
+        exercises = newExercises.sortedBy { it.environment }
         notifyDataSetChanged()
     }
 }

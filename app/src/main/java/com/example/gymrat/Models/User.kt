@@ -14,6 +14,7 @@ data class Profile(
     val age: String,
     val gender: String,
     val goal: String,
+    val environment: String
 
 )
 

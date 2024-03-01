@@ -8,6 +8,9 @@ class AuthManager {
     var programid: Int? = null
         private set
 
+    var goal: String? = null
+        private set
+
     companion object {
         val instance by lazy { AuthManager() }
     }
@@ -23,6 +26,9 @@ class AuthManager {
 
     fun setProgramId(id: Int) {
         programid = id
+    }
+    fun setGoal(programgoal: String) {
+        goal = programgoal
     }
 
     fun clearAuthToken() {

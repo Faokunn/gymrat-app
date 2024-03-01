@@ -1,5 +1,6 @@
 import android.annotation.SuppressLint
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +18,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProgramExercisesAdapter(private var programExercises: List<ProgramExerciseData>, private val updateListener: ProgramExerciseUpdateListener) : RecyclerView.Adapter<ProgramExercisesAdapter.ProgramExerciseViewHolder>() {
-
+class ProgramExercisesAdapter(
+    private var programExercises: List<ProgramExerciseData>,
+    private val updateListener: ProgramExerciseUpdateListener
+) : RecyclerView.Adapter<ProgramExercisesAdapter.ProgramExerciseViewHolder>() {
 
     class ProgramExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
@@ -29,6 +32,8 @@ class ProgramExercisesAdapter(private var programExercises: List<ProgramExercise
         val weightTextView: TextView = itemView.findViewById(R.id.weight)
         val editButton: Button = itemView.findViewById(R.id.editButton)
     }
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgramExerciseViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_program, parent, false)
@@ -49,6 +54,7 @@ class ProgramExercisesAdapter(private var programExercises: List<ProgramExercise
         holder.editButton.setOnClickListener {
             showEditDialog(holder.itemView.context, programExercise)
         }
+        Log.d("ProgramExercisesAdapter", "Selected Exercise Type in Adapter: ${programExercise.GroupMuscle}")
     }
 
     private fun showEditDialog(context: Context, programExercise: ProgramExerciseData) {
@@ -111,7 +117,8 @@ class ProgramExercisesAdapter(private var programExercises: List<ProgramExercise
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(newProgramExercises: List<ProgramExerciseData>) {
-        programExercises = newProgramExercises.sortedBy { it.GroupMuscle }
+        Log.d("ProgramExercisesAdapter", "setData called with ${newProgramExercises.size} items")
+        programExercises = newProgramExercises.sortedBy { it.targetMuscle }
         notifyDataSetChanged()
     }
 

@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -38,7 +40,23 @@ class MyprogramFragment : Fragment(), ProgramExercisesAdapter.ProgramExerciseUpd
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         programExercisesAdapter = ProgramExercisesAdapter(mutableListOf(), this)
         recyclerView.adapter = programExercisesAdapter
-        fetchProgramExercisesData()
+
+        val groupMuscles = resources.getStringArray(R.array.Group_Muscle)
+        val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, groupMuscles)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val spinner = binding.exerciseTypeSpinner
+        spinner.adapter = spinnerAdapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                fetchProgramExercisesData()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
 
         return binding.root
     }
@@ -52,35 +70,37 @@ class MyprogramFragment : Fragment(), ProgramExercisesAdapter.ProgramExerciseUpd
 
     private fun fetchProgramExercisesData() {
         val programId: Int? = AuthManager.instance.programid
-        Toast.makeText(
-            requireContext(),
-            "$programId",
-            Toast.LENGTH_SHORT
-        ).show()
         val call = RetrofitClient.instance.getProgramExercises(programId!!)
         Log.d("MyProgramFragment", "Request URL: ${call.request().url}")
 
         call.enqueue(object : Callback<ProgramExercisesResponse> {
-            override fun onResponse(
-                call: Call<ProgramExercisesResponse>,
-                response: Response<ProgramExercisesResponse>
-            ) {
+            override fun onResponse(call: Call<ProgramExercisesResponse>, response: Response<ProgramExercisesResponse>) {
                 if (response.isSuccessful) {
                     val programExercisesList = response.body()?.exercises ?: emptyList()
-                    Log.d(
-                        "MyProgramFragment",
-                        "Fetched ${programExercisesList.size} program exercises"
-                    )
-                    programExercisesAdapter.setData(programExercisesList)
+                    Log.d("MyProgramFragment", "Received ${programExercisesList.size} program exercises")
+
+                    programExercisesList.forEach {
+                        Log.d("MyProgramFragment", "GroupMuscle: ${it.GroupMuscle}")
+                    }
+
+                    val selectedExerciseType = binding.exerciseTypeSpinner.selectedItem.toString()
+                    Log.d("MyProgramFragment", "Selected Exercise Type: $selectedExerciseType")
+
+                    val filteredExercises = programExercisesList.filter { it.GroupMuscle == selectedExerciseType }
+                    Log.d("MyProgramFragment", "Filtered Exercises: ${filteredExercises.size}")
+
+                    programExercisesAdapter.setData(filteredExercises)
                 } else {
+                    Log.e("MyProgramFragment", "Failed to fetch program exercises. HTTP Status Code: ${response.code()}")
                     Toast.makeText(
                         requireContext(),
-                        "Failed to fetch program exercises",
+                        "Failed to fetch program exercises. Please try again later.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             }
 
+            // Handle network failure
             override fun onFailure(call: Call<ProgramExercisesResponse>, t: Throwable) {
                 Log.e("MyProgramFragment", "Failed to fetch program exercises", t)
                 Toast.makeText(
@@ -146,6 +166,7 @@ class MyprogramFragment : Fragment(), ProgramExercisesAdapter.ProgramExerciseUpd
         dialog.show()
     }
     override fun onProgramExerciseUpdated() {
+        Log.d("MyProgramFragment", "onProgramExerciseUpdated called")
         fetchProgramExercisesData()
     }
 

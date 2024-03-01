@@ -29,6 +29,7 @@ interface Api {
         @Field("profile[nickname]") nickname: String,
         @Field("profile[age]") age: String,
         @Field("profile[goal]") goal: String,
+        @Field("profile[environment]") environemnt: String,
         @Field("profile[gender]") gender: String,
         @Field("program[title]") title: String,
         @Field("program[goal]") pgoal: String
@@ -62,6 +63,7 @@ interface Api {
         @Field("sets") sets: Int,
         @Field("reps") reps: Int,
         @Field("weight") weight: Int,
+        @Field("program_goal") goal: String,
         @Field("program_id") programId: Int
     ): Call<LoginResponse>
 

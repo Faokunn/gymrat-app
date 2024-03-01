@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,6 +36,22 @@ class Chest1Fragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = exerciseAdapter
 
+        val chestMuscles = resources.getStringArray(R.array.Chest_Muscle)
+        val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, chestMuscles)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val spinner = binding.exerciseTypeSpinner
+        spinner.adapter = spinnerAdapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                fetchData()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
         binding.back.setOnClickListener {
             findNavController().navigate(R.id.action_chest1Fragment_to_homiesFragment)
         }
@@ -40,6 +59,7 @@ class Chest1Fragment : Fragment() {
         fetchData()
         return binding.root
     }
+
 
     private fun fetchData() {
         val api = RetrofitClient.instance
@@ -49,7 +69,12 @@ class Chest1Fragment : Fragment() {
                 if (response.isSuccessful) {
                     val exercisesResponse = response.body()
                     val exercises = exercisesResponse?.exercises ?: emptyList()
-                    exerciseAdapter.setData(exercises)
+
+                    val selectedExerciseType = binding.exerciseTypeSpinner.selectedItem.toString()
+                    val filteredExercises = exercises.filter { it.targetMuscle == selectedExerciseType }
+
+                    exerciseAdapter.setData(filteredExercises)
+
                 } else {
                     handleApiError(response.code())
                 }

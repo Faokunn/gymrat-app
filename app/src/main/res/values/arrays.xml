@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="Chest_Muscle">
+        <item>Upper Chest</item>
+        <item>Middle Chest</item>
+        <item>Lower Chest</item>
+        <item>Full Chest</item>
+    </array>
+    <array name="Bicep_Muscle">
+        <item>Brachialis</item>
+        <item>Long Head</item>
+        <item>Short Head</item>
+    </array>
+    <array name="Tricep_Muscle">
+        <item>Lateral Head</item>
+        <item>Medial Head</item>
+        <item>Long Head</item>
+    </array>
+    <array name="Shoulder_Muscle">
+        <item>Front Delts</item>
+        <item>Side Delts</item>
+        <item>Rear Delts</item>
+
+    </array>
+    <array name="Legs_Muscle">
+        <item>Quadriceps</item>
+        <item>Hamstrings</item>
+        <item>Glutes</item>
+        <item>Calves</item>
+    </array>
+    <array name="Back_Muscle">
+        <item>Upper Back</item>
+        <item>Middle Back</item>
+        <item>Lower Back</item>
+        <item>Lats</item>
+        <item>Traps</item>
+    </array>
+    <array name="Group_Muscle">
+        <item>Chest</item>
+        <item>Shoulder</item>
+        <item>Tricep</item>
+        <item>Bicep</item>
+        <item>Back</item>
+        <item>Leg</item>
+    </array>
+</resources>
