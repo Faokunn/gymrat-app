@@ -1,24 +1,21 @@
-package com.example.gymrat
+package com.example.gymrat.StartAndHome
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.ProfileResponse
 import com.example.gymrat.Models.ProgramResponse
+import com.example.gymrat.R
 import com.example.gymrat.api.RetrofitClient
 import com.example.gymrat.databinding.FragmentHomiesBinding
-import com.google.android.material.navigation.NavigationView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,7 +43,7 @@ class HomiesFragment : Fragment() {
                 if (response.isSuccessful) {
                     val profileResponse = response.body()
                     val nickname = profileResponse?.profile?.nickname
-                    binding.user.text = "Welcome $nickname"
+                    binding.user.text = "Welcome $nickname!"
                 } else {
                     Toast.makeText(context, "Failed to fetch user profile", Toast.LENGTH_SHORT).show()
                 }
@@ -94,6 +91,9 @@ class HomiesFragment : Fragment() {
         }
         binding.sariSari.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
+        }
+        binding.topExercisesButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homiesFragment_to_topExercisesFragment)
         }
 
 

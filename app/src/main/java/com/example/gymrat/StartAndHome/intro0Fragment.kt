@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.StartAndHome
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.gymrat.R
 import com.example.gymrat.databinding.FragmentIntro0Binding
 
 class intro0Fragment : Fragment() {

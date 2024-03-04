@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.muscles
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gymrat.Models.ExercisesResponse
+import com.example.gymrat.R
 import com.example.gymrat.RecycleView.ExerciseAdapter
 import com.example.gymrat.api.RetrofitClient
 import com.example.gymrat.databinding.FragmentTricepsBinding

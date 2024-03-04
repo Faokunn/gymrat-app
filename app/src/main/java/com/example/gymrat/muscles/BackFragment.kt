@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.muscles
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -13,27 +13,28 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gymrat.Models.ExercisesResponse
+import com.example.gymrat.R
 import com.example.gymrat.RecycleView.ExerciseAdapter
 import com.example.gymrat.api.RetrofitClient
-import com.example.gymrat.databinding.FragmentBicepsBinding
+import com.example.gymrat.databinding.FragmentBackBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class BicepsFragment : Fragment() {
-    private lateinit var binding: FragmentBicepsBinding
+class BackFragment : Fragment() {
+    private lateinit var binding: FragmentBackBinding
     private lateinit var exerciseAdapter: ExerciseAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBicepsBinding.inflate(inflater,container,false)
+        binding = FragmentBackBinding.inflate(inflater,container,false)
         exerciseAdapter = ExerciseAdapter(emptyList())
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = exerciseAdapter
 
-        val bicepMuscles = resources.getStringArray(R.array.Bicep_Muscle)
-        val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, bicepMuscles)
+        val backMuscles = resources.getStringArray(R.array.Back_Muscle)
+        val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, backMuscles)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         val spinner = binding.exerciseTypeSpinner
@@ -49,14 +50,14 @@ class BicepsFragment : Fragment() {
         }
 
         binding.back.setOnClickListener {
-            findNavController().navigate(R.id.action_bicepsFragment_to_homiesFragment)
+            findNavController().navigate(R.id.action_backFragment_to_homiesFragment)
         }
         fetchData()
         return binding.root
     }
     private fun fetchData() {
         val api = RetrofitClient.instance
-        val groupMuscle = "Bicep"
+        val groupMuscle = "Back"
         api.getExercises(groupMuscle).enqueue(object : Callback<ExercisesResponse> {
             override fun onResponse(call: Call<ExercisesResponse>, response: Response<ExercisesResponse>) {
                 if (response.isSuccessful) {

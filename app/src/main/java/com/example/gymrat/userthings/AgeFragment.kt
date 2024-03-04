@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.userthings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gymrat.R
 import com.example.gymrat.databinding.FragmentAgeBinding
 
 class AgeFragment : Fragment() {
@@ -26,7 +26,7 @@ class AgeFragment : Fragment() {
             val ageInput = binding.ageEditText.text.toString()
             if (ageInput.isNotBlank()) {
                 val age = ageInput
-                findNavController().navigate(R.id.action_ageFragment_to_infoFragment, Bundle().apply {
+                findNavController().navigate(R.id.action_ageFragment_to_goalEnvironmentFragment, Bundle().apply {
                     putString("gender", gender)
                     putString("age", age)
                 })

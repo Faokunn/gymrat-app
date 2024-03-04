@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.StartAndHome
 
 import ProgramExercisesAdapter
 import android.annotation.SuppressLint
@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.ProgramExercisesResponse
+import com.example.gymrat.R
 import com.example.gymrat.api.RetrofitClient
 import com.example.gymrat.databinding.FragmentMyprogramBinding
 import retrofit2.Call

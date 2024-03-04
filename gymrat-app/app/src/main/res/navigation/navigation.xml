@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/intro1Fragment"
-        android:name="com.example.gymrat.Intro1Fragment"
+        android:name="com.example.gymrat.StartAndHome.Intro1Fragment"
         android:label="fragment_intro1"
         tools:layout="@layout/fragment_intro1" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/intro2Fragment"
-        android:name="com.example.gymrat.Intro2Fragment"
+        android:name="com.example.gymrat.StartAndHome.Intro2Fragment"
         android:label="fragment_intro2"
         tools:layout="@layout/fragment_intro2" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/genderFragment"
-        android:name="com.example.gymrat.GenderFragment"
+        android:name="com.example.gymrat.userthings.GenderFragment"
         android:label="fragment_gender"
         tools:layout="@layout/fragment_gender" >
         <action android:id="@+id/action_genderFragment_to_homiesFragment" />
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/homiesFragment"
-        android:name="com.example.gymrat.HomiesFragment"
+        android:name="com.example.gymrat.StartAndHome.HomiesFragment"
         android:label="fragment_homies"
         tools:layout="@layout/fragment_homies" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/intro0Fragment"
-        android:name="com.example.gymrat.intro0Fragment"
+        android:name="com.example.gymrat.StartAndHome.intro0Fragment"
         android:label="fragment_intro0"
         tools:layout="@layout/fragment_intro0" >
         <action
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.gymrat.InfoFragment"
+        android:name="com.example.gymrat.userthings.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" >
         <action
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
-        android:name="com.example.gymrat.LoginFragment"
+        android:name="com.example.gymrat.StartAndHome.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -107,12 +107,12 @@
 <<<<<<< HEAD
     <fragment
         android:id="@+id/backFragment"
-        android:name="com.example.gymrat.BackFragment"
+        android:name="com.example.gymrat.muscles.BackFragment"
         android:label="fragment_back"
         tools:layout="@layout/fragment_back" />
     <fragment
         android:id="@+id/shoulderFragment"
-        android:name="com.example.gymrat.ShoulderFragment"
+        android:name="com.example.gymrat.muscles.ShoulderFragment"
         android:label="fragment_shoulder"
         tools:layout="@layout/fragment_shoulder" />
 =======

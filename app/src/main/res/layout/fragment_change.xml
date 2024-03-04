@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#121323"
-    tools:context=".ChangeFragment">
+    tools:context=".userthings.ChangeFragment">
 
     <TextView
         android:id="@+id/textView5"

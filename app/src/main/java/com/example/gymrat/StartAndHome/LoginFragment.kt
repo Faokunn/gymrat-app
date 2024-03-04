@@ -1,8 +1,7 @@
-package com.example.gymrat
+package com.example.gymrat.StartAndHome
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.Models.ProgramResponse
+import com.example.gymrat.R
 import com.example.gymrat.api.RetrofitClient
-import com.example.gymrat.databinding.FragmentInfoBinding
 import com.example.gymrat.databinding.FragmentLoginBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

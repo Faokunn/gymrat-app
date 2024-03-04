@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.userthings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.DefaultResponse
+import com.example.gymrat.R
 import com.example.gymrat.api.RetrofitClient
-import com.example.gymrat.databinding.FragmentBicepsBinding
 import com.example.gymrat.databinding.FragmentChangeBinding
 import retrofit2.Call
 import retrofit2.Callback

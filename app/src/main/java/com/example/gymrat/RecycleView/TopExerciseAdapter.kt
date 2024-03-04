@@ -1,7 +1,4 @@
-package com.example.gymrat.RecycleView
-
 import android.annotation.SuppressLint
-import com.example.gymrat.api.RetrofitClient
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -15,47 +12,36 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.R
-import com.example.gymrat.model.ExercisesData
+import com.example.gymrat.api.RetrofitClient
+import com.example.gymrat.model.TopExercisesData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-// ExerciseAdapter.kt
-class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
+class TopExercisesAdapter(
+    private val context: Context,
+    private var topExercisesList: List<TopExercisesData>
+) : RecyclerView.Adapter<TopExercisesAdapter.ViewHolder>() {
 
-    class ExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val exerciseNameTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
-        val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
-        val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
-        val environmentTextView: TextView = itemView.findViewById(R.id.environmentTextView)
-        val formButton: Button = itemView.findViewById(R.id.formButton)
-        val addButton: Button = itemView.findViewById(R.id.addButton)
-
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.item_exercise, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_exercise, parent, false)
-        return ExerciseViewHolder(view)
-    }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val topExercisesData = topExercisesList[position]
 
-    override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
-        val exercise = exercises[position]
-        holder.exerciseNameTextView.text = exercise.exerciseName
-        holder.groupMuscleTextView.text = exercise.groupMuscle
-        holder.targetMuscleTextView.text = exercise.targetMuscle
-        holder.environmentTextView.text = exercise.environment
+
+        holder.exerciseNameTextView.text = topExercisesData.exerciseName
+        holder.groupMuscleTextView.text = topExercisesData.groupMuscle
+        holder.targetMuscleTextView.text = topExercisesData.targetMuscle
 
         holder.formButton.setOnClickListener {
-            showFormDialog(holder.itemView.context, exercise.properForm)
+            showFormDialog(holder.itemView.context, topExercisesData.ProperForm)
         }
         holder.addButton.setOnClickListener {
-            showAddDialog(holder.itemView.context, exercise)
+            showAddDialog(holder.itemView.context, topExercisesData)
         }
-    }
-
-    override fun getItemCount(): Int {
-        return exercises.size
     }
 
     private fun showFormDialog(context: Context, properForm: String) {
@@ -69,9 +55,8 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         val dialog = builder.create()
         dialog.show()
     }
-
     @SuppressLint("MissingInflatedId")
-    private fun showAddDialog(context: Context, exercise: ExercisesData) {
+    private fun showAddDialog(context: Context, exercise: TopExercisesData) {
         val builder = AlertDialog.Builder(context)
         val inflater = LayoutInflater.from(context)
         val dialogView = inflater.inflate(R.layout.dialog_add_exercise, null)
@@ -110,7 +95,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
 
     private fun addExerciseToProgram(
         context: Context,
-        exercise: ExercisesData,
+        exercise: TopExercisesData,
         sets: Int,
         reps: Int,
         weight: Int,
@@ -119,7 +104,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,goal ,exercise.properForm,programid)
+        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,goal ,exercise.ProperForm,programid)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
@@ -135,9 +120,20 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
             })
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun setData(newExercises: List<ExercisesData>) {
-        exercises = newExercises.sortedBy { it.environment }
+    override fun getItemCount(): Int {
+        return topExercisesList.size
+    }
+
+    fun updateData(newTopExercisesList: List<TopExercisesData>) {
+        topExercisesList = newTopExercisesList
         notifyDataSetChanged()
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val exerciseNameTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
+        val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
+        val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
+        val addButton: Button = itemView.findViewById(R.id.addButton)
+        val formButton: Button = itemView.findViewById(R.id.formButton)
     }
 }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#121323"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".muscles.Chest1Fragment">
+    tools:context=".StartAndHome.TopExercisesFragment">
 
     <View
         android:id="@+id/view2"
@@ -27,8 +27,8 @@
         android:fontFamily="@font/mainfont"
         android:letterSpacing="0.3"
         android:textColor="#F2F3F4"
-        android:text="CHEST"
-        android:textSize="20dp"
+        android:text="TOP EXERCISES"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,15 +72,6 @@
         app:layout_constraintTop_toBottomOf="@+id/view2"
         app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/exerciseTypeSpinner"
@@ -88,9 +79,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="44dp"
-        android:entries="@array/Chest_Muscle"
+        android:entries="@array/Group_Muscle"
         android:backgroundTint="#494b60"
-        android:prompt="@string/select_chest_muscle"
+        android:prompt="@string/select_group_muscle"
         app:layout_constraintEnd_toStartOf="@+id/back"
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toEndOf="@+id/textView11"

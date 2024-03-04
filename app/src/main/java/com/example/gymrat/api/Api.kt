@@ -6,6 +6,7 @@ import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.Models.ProfileResponse
 import com.example.gymrat.Models.ProgramExercisesResponse
 import com.example.gymrat.Models.ProgramResponse
+import com.example.gymrat.Models.TopExercisesResponse
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.DELETE
@@ -64,6 +65,7 @@ interface Api {
         @Field("reps") reps: Int,
         @Field("weight") weight: Int,
         @Field("program_goal") goal: String,
+        @Field("proper_form") properForm: String,
         @Field("program_id") programId: Int
     ): Call<LoginResponse>
 
@@ -96,4 +98,7 @@ interface Api {
         @Field("new_password") newPassword: String?,
         @Field("confirm_new_password") confirmNewPassword: String?
     ): Call<DefaultResponse>
+
+    @GET("api/top-exercises/{goal}")
+    fun getTopExercisesByGoal(@Path("goal") goal: String): Call<TopExercisesResponse>
 }

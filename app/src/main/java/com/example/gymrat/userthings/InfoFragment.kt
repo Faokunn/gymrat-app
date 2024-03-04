@@ -1,4 +1,4 @@
-package com.example.gymrat
+package com.example.gymrat.userthings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.DefaultResponse
+import com.example.gymrat.R
 import com.example.gymrat.api.RetrofitClient
-import com.example.gymrat.databinding.FragmentHomiesBinding
 import com.example.gymrat.databinding.FragmentInfoBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -30,6 +30,8 @@ class InfoFragment : Fragment() {
             val email = binding.email.text.toString().trim()
             val gender = requireArguments().getString("gender").toString()
             val age = requireArguments().getString("age").toString()
+            val goal = requireArguments().getString("goal").toString()
+            val environment = requireArguments().getString("environment").toString()
 
             if(nickname.isEmpty()){
                 binding.nickname.error = "Nickname Required"
@@ -63,7 +65,7 @@ class InfoFragment : Fragment() {
                 binding.email.requestFocus()
                 return@setOnClickListener
             }
-            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age,"Weight loss", "Gym",gender,"$nickname's Program","Weight loss").enqueue(object :
+            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age,goal, environment,gender,"$nickname's Program",goal).enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
                     if (response.isSuccessful) {

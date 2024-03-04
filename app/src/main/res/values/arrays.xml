@@ -43,4 +43,12 @@
         <item>Back</item>
         <item>Leg</item>
     </array>
+    <string-array name="goal_options">
+        <item>Weight loss</item>
+        <item>Muscle Building</item>
+    </string-array>
+    <string-array name="environment_options">
+        <item>Gym</item>
+        <item>Home Gym</item>
+    </string-array>
 </resources>
