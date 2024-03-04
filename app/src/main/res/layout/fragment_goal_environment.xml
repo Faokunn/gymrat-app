@@ -14,7 +14,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint="Weight"
@@ -44,8 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"
-        app:layout_constraintVertical_bias="0.916"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"></TextView>
 
     <TextView
         android:id="@+id/textView1123"
@@ -63,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight"
-        app:layout_constraintVertical_bias="1.0"></TextView>
+        app:layout_constraintVertical_bias="0.932"></TextView>
 
     <TextView
         android:id="@+id/textView1123s"
@@ -81,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight"
-        app:layout_constraintVertical_bias="0.123"></TextView>
+        app:layout_constraintVertical_bias="0.104"></TextView>
 
     <EditText
         android:id="@+id/goal_weight"
@@ -90,7 +89,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint="Goal Weight"
@@ -112,7 +111,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="124dp"
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint="Height"
@@ -171,14 +170,15 @@
         android:layout_height="48dp"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView1"
@@ -195,7 +195,7 @@
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="1.0"></TextView>
+        app:layout_constraintVertical_bias="0.775"></TextView>
 
     <Spinner
         android:id="@+id/environmentSpinner"
@@ -203,14 +203,16 @@
         android:layout_height="50dp"
         android:layout_below="@+id/goalSpinner"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@+id/goalSpinner"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView11"
@@ -218,12 +220,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/mainfont"
         android:text="Environment"
         android:textColor="@color/white"
         android:textSize="13dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="257dp"></TextView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalSpinner"></TextView>
 
     <Button
         android:id="@+id/continue_button"

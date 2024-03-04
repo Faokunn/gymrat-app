@@ -49,9 +49,21 @@
         android:src="@drawable/male_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
 
-    </ImageButton>
+        <TextView
+            android:id="@+id/male_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MALE"
+            android:textSize="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mainfont"
+            app:layout_constraintBottom_toBottomOf="@+id/male_button"
+            app:layout_constraintEnd_toEndOf="@+id/male_button"
+            app:layout_constraintStart_toStartOf="@+id/male_button"
+            app:layout_constraintTop_toTopOf="@+id/male_button"
+            app:layout_constraintVertical_bias="0.865" />
 
     <ImageButton
         android:id="@+id/female_button"
@@ -63,20 +75,34 @@
         android:src="@drawable/female_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/male_button"></ImageButton>
+        app:layout_constraintTop_toBottomOf="@+id/male_button"/>
+
+        <TextView
+            android:id="@+id/famale_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mainfont"
+            android:text="FEMALE"
+            android:textColor="@color/white"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/female_button"
+            app:layout_constraintEnd_toEndOf="@+id/female_button"
+            app:layout_constraintStart_toStartOf="@+id/female_button"
+            app:layout_constraintTop_toTopOf="@+id/female_button"
+            app:layout_constraintVertical_bias="0.865" />
 
     <Button
         android:id="@+id/rather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="272dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/white"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#121323"
         android:fontFamily="@font/mainfont"
         android:text="prefer not to answer"
-        android:textColor="#E8FFFFFF"
+        android:textColor="@color/black"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +129,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rather"
         app:layout_constraintVertical_bias="0.0">
-
     </Button>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

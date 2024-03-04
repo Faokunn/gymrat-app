@@ -120,7 +120,11 @@ class HomiesFragment : Fragment() {
                 R.id.nav_change -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_changeFragment)
                 }
+                R.id.nav_sarisari -> {
+                    findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
+                }
                 R.id.nav_programs -> {
+                    findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
                 }
                 R.id.nav_about -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_aboutFragment)

@@ -18,6 +18,14 @@
             android:icon="@drawable/muscle"
             android:title="REQUEST EXERCISE"/>
         <item
+            android:id="@+id/nav_sarisari"
+            android:icon="@drawable/nav_egg"
+            android:title="SARI-SARI"/>
+        <item
+            android:id="@+id/nav_calculator"
+            android:icon="@drawable/nav_calcu"
+            android:title="CALORIES CALCULATOR"/>
+        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/about"
             android:title="ABOUT"/>

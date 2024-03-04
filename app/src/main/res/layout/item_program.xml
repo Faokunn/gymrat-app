@@ -34,6 +34,36 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/Trashcan"
+                android:backgroundTint="@color/white"
+                android:layout_width="20dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="197dp" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="197dp"
+                    android:layout_marginTop="-23.2dp"
+                    app:srcCompat="@drawable/trashcan" />
+
+            <Button
+                android:id="@+id/Pencil"
+                android:backgroundTint="@color/white"
+                android:layout_width="20dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="-23dp"
+                android:layout_marginLeft="167dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="20dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="167dp"
+                android:layout_marginTop="-23.2dp"
+                app:srcCompat="@drawable/pencil" />
 
             <TextView
                 android:id="@+id/groupMuscleTextView"
@@ -82,12 +112,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"
                 android:textSize="15sp" />
-            <Button
-                android:id="@+id/editButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Edit"
-                android:onClick="onEditButtonClick" />
 
         </LinearLayout>
     </LinearLayout>

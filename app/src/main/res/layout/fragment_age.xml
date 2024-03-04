@@ -67,32 +67,40 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/back_button"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/button_color"
-        android:fontFamily="@font/mainfont"
-        android:text="Back"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/continue_button"
-        app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
-
-    <Button
         android:id="@+id/continue_button"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="156dp"
-        android:backgroundTint="@color/button_color"
-        android:fontFamily="@font/mainfont"
+        android:layout_width="272dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/white"
         android:text="Continue"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="13sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/ageEditText"
+        app:layout_constraintVertical_bias="0.203"></Button>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#121323"
+        android:fontFamily="@font/mainfont"
+        android:text="return"
+        android:textColor="#707070"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continue_button"
+        app:layout_constraintVertical_bias="0.0">
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
