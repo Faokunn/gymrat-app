@@ -89,6 +89,7 @@
             android:id="@+id/topExercisesButton"
             android:layout_width="319dp"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/mainfont"
             android:text="Top Exercises"
@@ -100,9 +101,9 @@
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_marginTop="20dp"
             android:layout_width="387dp"
             android:layout_height="620dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +113,216 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/mainfont"
+                    android:text="Progress"
+                    android:textColor="#A3FFFFFF"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topButtonsLayout" />
+
+                <TextView
+                    android:id="@+id/Goal"
+                    android:layout_width="106dp"
+                    android:layout_height="111dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/profile_edittext"
+                    android:backgroundTint="@color/button_color"
+                    android:fontFamily="@font/mainfont"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.117"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Progress"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                        android:id="@+id/goalweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/mainfont"
+                        android:text="Goal Weight"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/Goal"
+                        app:layout_constraintHorizontal_bias="0.209"
+                        app:layout_constraintStart_toStartOf="@+id/Goal"
+                        app:layout_constraintTop_toTopOf="@+id/Goal" />
+
+                        <TextView
+                            android:id="@+id/goalweight_Int"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Null"
+                            android:textColor="#A3FFFFFF"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="@+id/Goal"
+                            app:layout_constraintHorizontal_bias="0.123"
+                            app:layout_constraintStart_toStartOf="@+id/Goal"
+                            app:layout_constraintTop_toBottomOf="@+id/goalweight" />
+
+                    <TextView
+                        android:id="@+id/currentweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/mainfont"
+                        android:text="Current Weight"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/Goal"
+                        app:layout_constraintHorizontal_bias="0.346"
+                        app:layout_constraintStart_toStartOf="@+id/Goal"
+                        app:layout_constraintTop_toBottomOf="@+id/goalweight_Int" />
+
+                        <TextView
+                            android:id="@+id/currentweight_Int"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Null"
+                            android:textColor="#A3FFFFFF"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="@+id/Goal"
+                            app:layout_constraintHorizontal_bias="0.123"
+                            app:layout_constraintStart_toStartOf="@+id/Goal"
+                            app:layout_constraintTop_toBottomOf="@+id/currentweight" />
+
+                <TextView
+                    android:id="@+id/Calorie_Intake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/mainfont"
+                    android:text="Calorie Intake"
+                    android:textColor="#A3FFFFFF"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.334"
+                    app:layout_constraintStart_toEndOf="@+id/Progress"
+                    app:layout_constraintTop_toBottomOf="@+id/topButtonsLayout" />
+
+                <TextView
+                    android:id="@+id/Goal1"
+                    android:layout_width="199dp"
+                    android:layout_height="111dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/profile_edittext"
+                    android:backgroundTint="@color/button_color"
+                    android:fontFamily="@font/mainfont"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.285"
+                    app:layout_constraintStart_toEndOf="@+id/Goal"
+                    app:layout_constraintTop_toBottomOf="@+id/Calorie_Intake"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                        android:id="@+id/maintenance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mainfont"
+                        android:text="Maintenance Calories : "
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                        app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                        app:layout_constraintHorizontal_bias="0.243"
+                        app:layout_constraintStart_toStartOf="@+id/Goal1"
+                        app:layout_constraintTop_toTopOf="@+id/Goal1"
+                        app:layout_constraintVertical_bias="0.221" />
+
+                        <TextView
+                            android:id="@+id/maintenance_Int"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Null"
+                            android:textColor="#A3FFFFFF"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                            app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                            app:layout_constraintHorizontal_bias="0.052"
+                            app:layout_constraintStart_toEndOf="@+id/maintenance"
+                            app:layout_constraintTop_toTopOf="@+id/Goal1"
+                            app:layout_constraintVertical_bias="0.212" />
+
+                    <TextView
+                        android:id="@+id/calories_surplus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mainfont"
+                        android:text="Calories Surplus : "
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                        app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="@+id/Goal1"
+                        app:layout_constraintTop_toBottomOf="@+id/maintenance"
+                        app:layout_constraintVertical_bias="0.134" />
+
+                        <TextView
+                            android:id="@+id/calories_surplus_Int"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Null"
+                            android:textColor="#A3FFFFFF"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                            app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                            app:layout_constraintHorizontal_bias="0.123"
+                            app:layout_constraintStart_toEndOf="@+id/calories_surplus"
+                            app:layout_constraintTop_toBottomOf="@+id/maintenance_Int"
+                            app:layout_constraintVertical_bias="0.137" />
+
+                    <TextView
+                        android:id="@+id/calories_deticit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mainfont"
+                        android:layout_marginTop="1dp"
+                        android:text="Calories Deticit : "
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                        app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                        app:layout_constraintHorizontal_bias="0.168"
+                        app:layout_constraintStart_toStartOf="@+id/Goal1"
+                        app:layout_constraintTop_toBottomOf="@+id/calories_surplus"
+                        app:layout_constraintVertical_bias="0.19" />
+
+                        <TextView
+                            android:id="@+id/calories_deticit_Int"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Null"
+                            android:textColor="#A3FFFFFF"
+                            android:textSize="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                            app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                            app:layout_constraintHorizontal_bias="0.109"
+                            app:layout_constraintStart_toEndOf="@+id/calories_deticit"
+                            app:layout_constraintTop_toBottomOf="@+id/calories_surplus_Int"
+                            app:layout_constraintVertical_bias="0.205" />
 
                 <LinearLayout
                     android:id="@+id/topButtonsLayout"
@@ -126,15 +337,15 @@
                     android:id="@+id/my_programs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/mainfont"
-                    android:layout_marginTop="10dp"
                     android:text="My Program"
                     android:textColor="#A3FFFFFF"
                     android:textSize="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.102"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/Goal" />
 
                 <HorizontalScrollView
                     android:id="@+id/horizontalScrollView"
@@ -440,19 +651,19 @@
 
         </ScrollView>
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigationView"
-            android:layout_width="220dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@color/black"
-            app:headerLayout="@layout/dh_navigation"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/nav_menu"
-            android:visibility="invisible">
-        </com.google.android.material.navigation.NavigationView>
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/navigationView"-->
+<!--            android:layout_width="220dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:background="@color/black"-->
+<!--            app:headerLayout="@layout/dh_navigation"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:menu="@menu/nav_menu"-->
+<!--            android:visibility="invisible">-->
+<!--        </com.google.android.material.navigation.NavigationView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
