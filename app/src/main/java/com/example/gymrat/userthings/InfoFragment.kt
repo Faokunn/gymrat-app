@@ -32,6 +32,9 @@ class InfoFragment : Fragment() {
             val age = requireArguments().getString("age").toString()
             val goal = requireArguments().getString("goal").toString()
             val environment = requireArguments().getString("environment").toString()
+            val weight = requireArguments().getString("weight").toString().toInt()
+            val height = requireArguments().getString("height").toString().toInt()
+            val goalWeight = requireArguments().getString("goalWeight").toString().toInt()
 
             if(nickname.isEmpty()){
                 binding.nickname.error = "Nickname Required"
@@ -65,7 +68,7 @@ class InfoFragment : Fragment() {
                 binding.email.requestFocus()
                 return@setOnClickListener
             }
-            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age,goal, environment,gender,"$nickname's Program",goal).enqueue(object :
+            RetrofitClient.instance.createUser(email, password, cpassword, nickname, age,goal, weight,goalWeight,height,environment,gender,"$nickname's Program",goal).enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
                     if (response.isSuccessful) {

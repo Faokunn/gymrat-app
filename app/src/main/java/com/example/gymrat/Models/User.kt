@@ -9,11 +9,14 @@ data class User(
     val program: Program?
 )
 data class Profile(
-    val id:Int,
+    val id: Int,
     val nickname: String,
     val age: String,
     val gender: String,
     val goal: String,
+    val weight: Int,
+    val goal_weight: Int,
+    val height:Int,
     val environment: String
 
 )

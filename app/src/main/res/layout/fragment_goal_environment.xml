@@ -7,22 +7,126 @@
     android:background="#121323"
     tools:context=".userthings.GoalEnvironmentFragment">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/mainfont"
-        android:gravity="center"
-        android:text="FIND YOUR ZONE"
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint="Weight"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner">
 
-    </TextView>
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView11232"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/mainfont"
+        android:text="Weight"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"
+        app:layout_constraintVertical_bias="0.916"></TextView>
+
+    <TextView
+        android:id="@+id/textView1123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/mainfont"
+        android:inputType="number"
+        android:text="Height"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintVertical_bias="1.0"></TextView>
+
+    <TextView
+        android:id="@+id/textView1123s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/mainfont"
+        android:inputType="number"
+        android:text="Goal Weight"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintVertical_bias="0.123"></TextView>
+
+    <EditText
+        android:id="@+id/goal_weight"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint="Goal Weight"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="116dp"
+        android:height="1000dp"
+        android:background="@drawable/login_edittext"
+        android:hint="Height"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight">
+
+    </EditText>
 
     <TextView
         android:id="@+id/textView6"
@@ -36,27 +140,30 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.023">
+        app:layout_constraintVertical_bias="0.026">
 
     </TextView>
 
-    <Spinner
-        android:id="@+id/environmentSpinner"
-        android:layout_width="288dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/goalSpinner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/login_edittext"
-        android:textAlignment="center"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/mainfont"
+        android:gravity="center"
+        android:text="FIND YOUR ZONE"
         android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@+id/goalSpinner"
-        tools:layout_editor_absoluteX="60dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
 
     <Spinner
         android:id="@+id/goalSpinner"
@@ -64,14 +171,59 @@
         android:layout_height="48dp"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="60dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/mainfont"
+        android:text="Goal"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/goalSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0"></TextView>
+
+    <Spinner
+        android:id="@+id/environmentSpinner"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/goalSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_edittext"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/goalSpinner"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="60dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/mainfont"
+        android:text="Environment"
+        android:textColor="@color/white"
+        android:textSize="13dp"
         tools:layout_editor_absoluteX="60dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="257dp"></TextView>
 
     <Button
         android:id="@+id/continue_button"
@@ -84,8 +236,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"
+        app:layout_constraintVertical_bias="0.786"></Button>
 
     <Button
         android:id="@+id/back"
@@ -102,10 +256,9 @@
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/continue_button"
-        app:layout_constraintVertical_bias="0.0">
-    </Button>
+        app:layout_constraintVertical_bias="0.0"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

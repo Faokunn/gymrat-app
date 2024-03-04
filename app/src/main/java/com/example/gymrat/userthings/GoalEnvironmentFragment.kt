@@ -22,6 +22,7 @@ class GoalEnvironmentFragment : Fragment() {
 
         binding = FragmentGoalEnvironmentBinding.inflate(inflater, container, false)
 
+
         ArrayAdapter.createFromResource(
             requireContext(),
             R.array.goal_options,
@@ -43,12 +44,18 @@ class GoalEnvironmentFragment : Fragment() {
         binding.continueButton.setOnClickListener {
             val selectedGoal = binding.goalSpinner.selectedItem.toString()
             val selectedEnvironment = binding.environmentSpinner.selectedItem.toString()
+            val weight = binding.weight.text.toString()
+            val height = binding.height.text.toString()
+            val goal_weight = binding.goalWeight.text.toString()
 
             findNavController().navigate(R.id.action_goalEnvironmentFragment_to_infoFragment, Bundle().apply {
                 putString("gender", gender)
                 putString("age", age)
                 putString("goal", selectedGoal)
                 putString("environment", selectedEnvironment)
+                putString("weight", weight)
+                putString("height", height)
+                putString("goalWeight", goal_weight)
             })
         }
 
