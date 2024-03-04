@@ -30,7 +30,8 @@ class ProgramExercisesAdapter(
         val setsTextView: TextView = itemView.findViewById(R.id.sets)
         val repsTextView: TextView = itemView.findViewById(R.id.reps)
         val weightTextView: TextView = itemView.findViewById(R.id.weight)
-        val editButton: Button = itemView.findViewById(R.id.editButton)
+        val editButton: Button = itemView.findViewById(R.id.Pencil)
+        val deleteButton: Button = itemView.findViewById(R.id.Trashcan)
     }
 
 
@@ -52,26 +53,14 @@ class ProgramExercisesAdapter(
         holder.weightTextView.text = "Weight: ${programExercise.weight} kg"
 
         holder.editButton.setOnClickListener {
-            showEditDialog(holder.itemView.context, programExercise)
+            showEditDialogWithData(holder.itemView.context, programExercise)
+        }
+        holder.deleteButton.setOnClickListener {
+            showDeleteConfirmationDialog(holder.itemView.context, programExercise)
         }
         Log.d("ProgramExercisesAdapter", "Selected Exercise Type in Adapter: ${programExercise.GroupMuscle}")
     }
 
-    private fun showEditDialog(context: Context, programExercise: ProgramExerciseData) {
-        val builder = AlertDialog.Builder(context)
-        builder.setTitle(programExercise.exercise)
-        builder.setMessage("Sets: ${programExercise.sets}\nReps: ${programExercise.reps}\nWeight: ${programExercise.weight} kg")
-
-        builder.setPositiveButton("Edit") { _, _ ->
-            showEditDialogWithData(context, programExercise)
-        }
-
-        builder.setNegativeButton("Delete") { _, _ ->
-            showDeleteConfirmationDialog(context, programExercise)
-        }
-
-        builder.show()
-    }
 
     private fun showEditDialogWithData(context: Context, programExercise: ProgramExerciseData) {
         val builder = AlertDialog.Builder(context)

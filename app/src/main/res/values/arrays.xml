@@ -51,4 +51,13 @@
         <item>Gym</item>
         <item>Home Gym</item>
     </string-array>
+    <string-array name="gender_options">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+    <string-array name="active_options">
+        <item>Light: 1–2 Days/Week</item>
+        <item>Moderate: 3–5 Days/Week</item>
+        <item>Heavy: 6–7 Days/Week</item>
+    </string-array>
 </resources>

@@ -6,6 +6,7 @@ data class User(
     val id: Int,
     val email: String,
     val profile: ProfileResponse,
+    val calories: Calories?,
     val program: Program?
 )
 data class Profile(
@@ -25,4 +26,11 @@ data class Program(
     val id:Int,
     val goal: String,
     val title:String
+)
+
+data class Calories(
+    val id:Int,
+    val maintenance: String,
+    val surplus: String,
+    val deficit: String,
 )

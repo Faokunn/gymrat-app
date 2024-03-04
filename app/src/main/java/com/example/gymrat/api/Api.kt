@@ -1,5 +1,6 @@
 package com.example.gymrat.api
 
+import com.example.gymrat.Models.CaloriesResponse
 import com.example.gymrat.Models.DefaultResponse
 import com.example.gymrat.Models.ExercisesResponse
 import com.example.gymrat.Models.LoginResponse
@@ -36,7 +37,11 @@ interface Api {
         @Field("profile[environment]") environemnt: String,
         @Field("profile[gender]") gender: String,
         @Field("program[title]") title: String,
-        @Field("program[goal]") pgoal: String
+        @Field("program[goal]") pgoal: String,
+        @Field("calories[maintenance]") maintenance: Int,
+        @Field("calories[surplus]") surplus: Int,
+        @Field("calories[deficit]") deficit: Int
+
     ): Call<DefaultResponse>
 
     @FormUrlEncoded
@@ -53,6 +58,15 @@ interface Api {
         @Field("sets") sets: Int,
         @Field("reps") reps: Int,
         @Field("weight") weight: Int
+    ): Call<LoginResponse>
+
+    @FormUrlEncoded
+    @PUT("api/calories/{user_id}")
+    fun updateCalories(
+        @Path("user_id") id: Int,
+        @Field("maintenance") maintenance: String,
+        @Field("surplus") surplus: String,
+        @Field("deficit") deficit: String
     ): Call<LoginResponse>
 
     @DELETE("api/ProgramExercises/{id}")
@@ -80,6 +94,9 @@ interface Api {
 
     @GET("api/profile/{user_id}")
     fun getUserProfile(@Path("user_id") userId: Int): Call<ProfileResponse>
+
+    @GET("api/calories/{user_id}")
+    fun getUserCalories(@Path("user_id") userId: Int): Call<CaloriesResponse>
 
     @GET("api/program/{user_id}")
     fun getUserProgram(@Path("user_id") userId: Int): Call<ProgramResponse>

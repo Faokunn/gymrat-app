@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121323"
-    tools:context=".userthings.GoalEnvironmentFragment">
-
+    tools:context=".StartAndHome.CalculatorFragment">
     <EditText
         android:id="@+id/weight"
         android:layout_width="291dp"
@@ -26,7 +25,7 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner">
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner">
 
     </EditText>
 
@@ -44,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         app:layout_constraintVertical_bias="0.45"></TextView>
 
     <TextView
@@ -63,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight"
-        app:layout_constraintVertical_bias="0.933"></TextView>
+        app:layout_constraintVertical_bias="0.523"></TextView>
 
     <TextView
         android:id="@+id/textView1123s"
@@ -73,37 +72,39 @@
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/mainfont"
         android:inputType="number"
-        android:text="Goal Weight(kg)"
+        android:text="Physical Activity"
         android:textColor="@color/white"
         android:textSize="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/height"
+        app:layout_constraintBottom_toTopOf="@+id/physical_activitySpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight"
-        app:layout_constraintVertical_bias="0.114"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="0.588"></TextView>
 
-    <EditText
-        android:id="@+id/goal_weight"
+    <Spinner
+        android:id="@+id/physical_activitySpinner"
         android:layout_width="291dp"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
         android:height="1000dp"
         android:background="@drawable/login_edittext"
-        android:hint="Goal Weight"
+        android:hint="Physical Activity"
         android:maxLines="1"
         android:textAlignment="center"
         android:textColor="@color/white"
+
         android:textColorHint="@color/white"
         android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight">
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="0.585">
 
-    </EditText>
+    </Spinner>
 
     <EditText
         android:id="@+id/height"
@@ -112,7 +113,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="124dp"
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint="Height"
@@ -121,10 +121,12 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight">
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintVertical_bias="0.273">
 
     </EditText>
 
@@ -134,7 +136,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
-        android:text="Select What's Your current Situation \nKnow your Goals."
+        android:text="Calculate and know your TDEE"
         android:textColor="#757575"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -154,7 +156,7 @@
         android:layout_marginTop="52dp"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
-        android:text="FIND YOUR ZONE"
+        android:text="CALORIE CALCULATOR"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -165,8 +167,8 @@
 
     </TextView>
 
-    <Spinner
-        android:id="@+id/goalSpinner"
+    <EditText
+        android:id="@+id/age"
         android:layout_width="291dp"
         android:layout_height="48dp"
         android:layout_below="@+id/textView6"
@@ -174,6 +176,8 @@
         android:layout_marginTop="48dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
+        android:hint="Age"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +192,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/mainfont"
-        android:text="Goal"
+        android:text="Age"
         android:textColor="@color/white"
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/age"
@@ -199,10 +203,10 @@
         app:layout_constraintVertical_bias="0.775"></TextView>
 
     <Spinner
-        android:id="@+id/environmentSpinner"
+        android:id="@+id/genderSpinner"
         android:layout_width="288dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/goalSpinner"
+        android:layout_below="@+id/age"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:background="@drawable/login_edittext"
@@ -221,22 +225,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/mainfont"
-        android:text="Environment"
+        android:text="Gender"
         android:textColor="@color/white"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalSpinner"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/age"></TextView>
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="272dp"
         android:layout_height="54dp"
         android:backgroundTint="@color/white"
-        android:text="Continue"
+        android:text="CALCULATE"
         android:textColor="@color/black"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -244,7 +248,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/environmentSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         app:layout_constraintVertical_bias="0.786"></Button>
 
     <Button

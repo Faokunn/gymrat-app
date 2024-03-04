@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
+import com.example.gymrat.Models.CaloriesResponse
 import com.example.gymrat.Models.ProfileResponse
 import com.example.gymrat.Models.ProgramResponse
 import com.example.gymrat.R
@@ -35,15 +36,21 @@ class HomiesFragment : Fragment() {
         binding = FragmentHomiesBinding.inflate(inflater,container,false)
         val user_id = AuthManager.instance.userid
         val user_id2 = AuthManager.instance.userid
+        val user_id3 = AuthManager.instance.userid
         val call = RetrofitClient.instance.getUserProfile(user_id!!)
         val call2 = RetrofitClient.instance.getUserProgram(user_id2!!)
+        val call3 = RetrofitClient.instance.getUserCalories(user_id3!!)
         call.enqueue(object : Callback<ProfileResponse> {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<ProfileResponse>, response: Response<ProfileResponse>) {
                 if (response.isSuccessful) {
                     val profileResponse = response.body()
                     val nickname = profileResponse?.profile?.nickname
+                    val goalWeight = profileResponse?.profile?.goal_weight
+                    val currentWeight = profileResponse?.profile?.weight
                     binding.user.text = "Welcome $nickname!"
+                    binding.goalweightInt.text = "$goalWeight"
+                    binding.currentweightInt.text = "$currentWeight"
                 } else {
                     Toast.makeText(context, "Failed to fetch user profile", Toast.LENGTH_SHORT).show()
                 }
@@ -68,6 +75,52 @@ class HomiesFragment : Fragment() {
                 TODO("Not yet implemented")
             }
         })
+        call3.enqueue(object : Callback<CaloriesResponse> {
+            @SuppressLint("SetTextI18n")
+            override fun onResponse(call: Call<CaloriesResponse>, response: Response<CaloriesResponse>) {
+                if (response.isSuccessful) {
+                    val calorieResponse = response.body()
+                    val maintenance = calorieResponse?.calories?.maintenance
+                    val surplus = calorieResponse?.calories?.surplus
+                    val deficit = calorieResponse?.calories?.deficit
+
+                    binding.maintenanceInt.text = "$maintenance"
+                    binding.caloriesSurplusInt.text = "$surplus"
+                    binding.caloriesDeticitInt.text = "$deficit"
+
+                    if (maintenance?.toInt() == 0 && surplus?.toInt() == 0 && deficit?.toInt() == 0) {
+                        binding.maintenance.visibility = View.GONE
+                        binding.maintenanceInt.visibility = View.GONE
+                        binding.caloriesSurplus.visibility = View.GONE
+                        binding.caloriesSurplusInt.visibility = View.GONE
+                        binding.caloriesDeticit.visibility = View.GONE
+                        binding.caloriesDeticitInt.visibility = View.GONE
+
+                        binding.tapToCalculate.visibility = View.VISIBLE
+                    } else {
+                        binding.maintenance.visibility = View.VISIBLE
+                        binding.maintenanceInt.visibility = View.VISIBLE
+                        binding.caloriesSurplus.visibility = View.VISIBLE
+                        binding.caloriesSurplusInt.visibility = View.VISIBLE
+                        binding.caloriesDeticit.visibility = View.VISIBLE
+                        binding.caloriesDeticitInt.visibility = View.VISIBLE
+
+                        binding.tapToCalculate.visibility = View.GONE
+                    }
+                } else {
+                    Toast.makeText(context, "Failed to fetch user calories", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<CaloriesResponse>, t: Throwable) {
+                // Handle failure if needed
+            }
+        })
+
+        binding.tapToCalculate.setOnClickListener {
+            findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
+        }
+
         binding.calsButton.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
         }
@@ -125,6 +178,9 @@ class HomiesFragment : Fragment() {
                 }
                 R.id.nav_programs -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
+                }
+                R.id.nav_calculator -> {
+                    findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
                 }
                 R.id.nav_about -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_aboutFragment)

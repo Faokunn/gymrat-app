@@ -2,6 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:textColor="@color/white"
+
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -9,9 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/mainfont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edit Exercise"
@@ -20,7 +25,10 @@
             android:gravity="center"/>
 
         <EditText
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/mainfont"
             android:id="@+id/editSets"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -28,7 +36,10 @@
             android:inputType="number"/>
 
         <EditText
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/mainfont"
             android:id="@+id/editReps"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -36,6 +47,9 @@
             android:inputType="number"/>
 
         <EditText
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/mainfont"
+            android:textColor="@color/black"
             android:id="@+id/editWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

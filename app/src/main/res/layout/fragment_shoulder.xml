@@ -27,7 +27,7 @@
         android:fontFamily="@font/mainfont"
         android:letterSpacing="0.3"
         android:textColor="#F2F3F4"
-        android:text="SHOULD"
+        android:text="SHOULDER"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"

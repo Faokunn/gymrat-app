@@ -92,6 +92,9 @@
         <action
             android:id="@+id/action_homiesFragment_to_topExercisesFragment"
             app:destination="@id/topExercisesFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
     </fragment>
     <fragment
         android:id="@+id/intro0Fragment"
@@ -236,5 +239,13 @@
         <action
             android:id="@+id/action_goalEnvironmentFragment_to_ageFragment"
             app:destination="@id/ageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="CalculatorFragment"
+        android:label="CalculatorFragment" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
     </fragment>
 </navigation>

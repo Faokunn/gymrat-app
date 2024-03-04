@@ -26,7 +26,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            tools:ignore="UnknownId" />
 
         <View
             android:id="@+id/view"
@@ -75,13 +76,12 @@
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/mainfont"
             android:text="Welcome Null"
-            android:layout_marginLeft="28dp"
             android:textColor="@color/white"
             android:textSize="18dp"
-            app:layout_constraintHorizontal_bias="0.137"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -230,6 +230,21 @@
                     app:layout_constraintStart_toEndOf="@+id/Goal"
                     app:layout_constraintTop_toBottomOf="@+id/Calorie_Intake"
                     tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tapToCalculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mainfont"
+                    android:text="TAP TO CALCULATE"
+                    android:textColor="#A3FFFFFF"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/Goal1"
+                    app:layout_constraintEnd_toEndOf="@+id/Goal1"
+                    app:layout_constraintHorizontal_bias="0.265"
+                    app:layout_constraintStart_toStartOf="@+id/Goal1"
+                    app:layout_constraintTop_toTopOf="@+id/Goal1"
+                    app:layout_constraintVertical_bias="0.463" />
 
                 <TextView
                         android:id="@+id/maintenance"
@@ -651,19 +666,19 @@
 
         </ScrollView>
 
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/navigationView"-->
-<!--            android:layout_width="220dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="start"-->
-<!--            android:background="@color/black"-->
-<!--            app:headerLayout="@layout/dh_navigation"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:menu="@menu/nav_menu"-->
-<!--            android:visibility="invisible">-->
-<!--        </com.google.android.material.navigation.NavigationView>-->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/black"
+            app:headerLayout="@layout/dh_navigation"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/nav_menu"
+            android:visibility="invisible">
+        </com.google.android.material.navigation.NavigationView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
