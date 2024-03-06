@@ -95,6 +95,9 @@
         <action
             android:id="@+id/action_homiesFragment_to_calculatorFragment"
             app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_homiesFragment_to_requestFragment"
+            app:destination="@id/requestFragment" />
     </fragment>
     <fragment
         android:id="@+id/intro0Fragment"
@@ -246,6 +249,15 @@
         android:label="CalculatorFragment" >
         <action
             android:id="@+id/action_calculatorFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.example.gymrat.StartAndHome.RequestFragment"
+        android:label="fragment_request"
+        tools:layout="@layout/fragment_request" >
+        <action
+            android:id="@+id/action_requestFragment_to_homiesFragment"
             app:destination="@id/homiesFragment" />
     </fragment>
 </navigation>

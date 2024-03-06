@@ -1,17 +1,23 @@
 package com.example.gymrat.StartAndHome
 
 import android.annotation.SuppressLint
+import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.CaloriesResponse
+import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.Models.ProfileResponse
 import com.example.gymrat.Models.ProgramResponse
 import com.example.gymrat.R
@@ -116,7 +122,9 @@ class HomiesFragment : Fragment() {
                 // Handle failure if needed
             }
         })
-
+        binding.Goal.setOnClickListener {
+            showEditWeightsDialog(requireContext())
+        }
         binding.tapToCalculate.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
         }
@@ -177,7 +185,7 @@ class HomiesFragment : Fragment() {
                     findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
                 }
                 R.id.nav_programs -> {
-                    findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
+                    findNavController().navigate(R.id.action_homiesFragment_to_requestFragment)
                 }
                 R.id.nav_calculator -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
@@ -194,6 +202,74 @@ class HomiesFragment : Fragment() {
         }
 
         return binding.root
+    }
+    private fun showEditWeightsDialog(context: Context) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Edit Weights")
+
+        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_edit_weights, null)
+        val weightEditText: EditText = dialogView.findViewById(R.id.editTextWeight)
+        val goalWeightEditText: EditText = dialogView.findViewById(R.id.editTextGoalWeight)
+
+        builder.setView(dialogView)
+
+        builder.setPositiveButton("Save") { _, _ ->
+            val weight = weightEditText.text.toString()
+            val goalWeight = goalWeightEditText.text.toString()
+            updateWeight(weight, goalWeight)
+            refreshData()
+        }
+
+        builder.setNegativeButton("Cancel", null)
+
+        builder.show()
+    }
+
+    private fun updateWeight(weight: String, goalWeight: String) {
+        val userId = AuthManager.instance.userid
+        val call = RetrofitClient.instance.updateWeight(userId!!, weight, goalWeight)
+
+        call.enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(context, "Weights updated successfully", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "Failed to update weights", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Toast.makeText(context, "Network error", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    private fun refreshData() {
+        val callProfile = RetrofitClient.instance.getUserProfile(user_id!!)
+
+
+        callProfile.enqueue(object : Callback<ProfileResponse> {
+            @SuppressLint("SetTextI18n")
+            override fun onResponse(
+                call: Call<ProfileResponse>,
+                response: Response<ProfileResponse>
+            ) {
+                if (response.isSuccessful) {
+                    val profileResponse = response.body()
+                    val goalWeight = profileResponse?.profile?.goal_weight
+                    val currentWeight = profileResponse?.profile?.weight
+                    binding.goalweightInt.text = "$goalWeight"
+                    binding.currentweightInt.text = "$currentWeight"
+                } else {
+                    Toast.makeText(context, "Failed to fetch user profile", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+
+            override fun onFailure(call: Call<ProfileResponse>, t: Throwable) {
+            }
+        })
+
     }
 
 }

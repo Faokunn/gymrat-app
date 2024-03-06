@@ -60,4 +60,46 @@
         <item>Moderate: 3–5 Days/Week</item>
         <item>Heavy: 6–7 Days/Week</item>
     </string-array>
+    <string-array name="groupMuscle_options">
+        <item>Chest</item>
+        <item>Bicep</item>
+        <item>Tricep</item>
+        <item>Shoulder</item>
+        <item>Back</item>
+        <item>Leg</item>
+    </string-array>
+    <string-array name="chest_options">
+        <item>Upper Chest</item>
+        <item>Middle Chest</item>
+        <item>Lower Chest</item>
+        <item>Full Chest</item>
+    </string-array>
+    <string-array name="back_options">
+        <item>Upper Back</item>
+        <item>Middle Back</item>
+        <item>Lower Back</item>
+        <item>Lats</item>
+        <item>Traps</item>
+    </string-array>
+    <string-array name="bicep_options">
+        <item>Brachialis</item>
+        <item>Long Head</item>
+        <item>Short Head</item>
+    </string-array>
+    <string-array name="tricep_options">
+        <item>Lateral Head</item>
+        <item>Medial Head</item>
+        <item>Long Head</item>
+    </string-array>
+    <string-array name="shoulder_options">
+        <item>Front Delts</item>
+        <item>Side Delts</item>
+        <item>Rear Delts</item>
+    </string-array>
+    <string-array name="leg_options">
+        <item>Quadriceps</item>
+        <item>Hamstrings</item>
+        <item>Glutes</item>
+        <item>Calves</item>
+    </string-array>
 </resources>

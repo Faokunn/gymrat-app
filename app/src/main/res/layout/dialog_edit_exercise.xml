@@ -7,7 +7,6 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -19,7 +18,7 @@
             android:fontFamily="@font/mainfont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Exercise"
+            android:text="@string/edit_exercise"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -32,8 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Sets"
-            android:inputType="number"/>
+            android:hint="@string/sets"
+            android:inputType="number"
+            android:autofillHints="" />
 
         <EditText
             android:textColorHint="@color/black"
@@ -43,8 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Reps"
-            android:inputType="number"/>
+            android:hint="@string/reps"
+            android:inputType="number"
+            android:autofillHints="" />
 
         <EditText
             android:textColorHint="@color/black"
@@ -54,8 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Weight (kg)"
-            android:inputType="numberDecimal"/>
+            android:hint="@string/weight_kg"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
 
     </LinearLayout>
 

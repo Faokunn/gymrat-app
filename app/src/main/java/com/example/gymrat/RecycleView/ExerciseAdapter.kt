@@ -119,7 +119,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,goal ,exercise.properForm,programid)
+        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,exercise.environment,goal ,exercise.properForm,programid)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {

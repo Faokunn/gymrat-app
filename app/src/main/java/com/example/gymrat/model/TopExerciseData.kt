@@ -6,6 +6,7 @@ data class TopExercisesData(
     @SerializedName("Exercise") val exerciseName: String,
     @SerializedName("GroupMuscle") val groupMuscle: String,
     @SerializedName("TargetMuscle") val targetMuscle: String,
+    val environment: String,
     @SerializedName("Count") val count: Int,
     val ProperForm:String
 )

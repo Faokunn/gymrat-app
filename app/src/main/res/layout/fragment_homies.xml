@@ -92,7 +92,7 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/mainfont"
-            android:text="Top Exercises"
+            android:text="Recommended Exercises"
             android:textSize="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

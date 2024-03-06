@@ -19,14 +19,15 @@
         android:layout_marginTop="64dp"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
-        android:text="HOW OLD ARE YOU?"
+        android:text="@string/how_old_are_you"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/textView2"
@@ -36,7 +37,7 @@
         android:layout_alignParentEnd="true"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
-        android:text="Share you age for a custom-tailored workout designed to meet your specific fitness goals."
+        android:text="@string/share_you_age_for_a_custom_tailored_workout_designed_to_meet_your_specific_fitness_goals"
         android:textColor="#757575"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -45,33 +46,36 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="TextSizeCheck" />
 
     <!-- Replace the EditText with the appropriate ID -->
 
     <EditText
         android:id="@+id/ageEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="270dp"
+        android:layout_height="241dp"
         android:layout_marginTop="84dp"
+        android:autofillHints=""
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/mainfont"
-        android:textAlignment="center"
         android:inputType="number"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="150sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="272dp"
         android:layout_height="54dp"
         android:backgroundTint="@color/white"
-        android:text="Continue"
+        android:text="@string/continuea"
         android:textColor="@color/black"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -80,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ageEditText"
-        app:layout_constraintVertical_bias="0.203"></Button>
+        app:layout_constraintVertical_bias="0.203"/>
 
     <Button
         android:id="@+id/back"
@@ -92,15 +96,15 @@
         android:layout_alignParentBottom="true"
         android:backgroundTint="#121323"
         android:fontFamily="@font/mainfont"
-        android:text="return"
+        android:text="@string/a"
         android:textColor="#707070"
-        android:textSize="11dp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/continue_button"
-        app:layout_constraintVertical_bias="0.0">
-    </Button>
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

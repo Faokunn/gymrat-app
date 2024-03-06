@@ -69,6 +69,14 @@ interface Api {
         @Field("deficit") deficit: String
     ): Call<LoginResponse>
 
+    @FormUrlEncoded
+    @PUT("api/update-weights/{user_id}")
+    fun updateWeight(
+        @Path("user_id") id: Int,
+        @Field("weight") weight: String,
+        @Field("goal_weight") goal_weight: String,
+    ): Call<LoginResponse>
+
     @DELETE("api/ProgramExercises/{id}")
     fun deleteProgramExercise(@Path("id") id: Int): Call<LoginResponse>
 
@@ -81,6 +89,7 @@ interface Api {
         @Field("sets") sets: Int,
         @Field("reps") reps: Int,
         @Field("weight") weight: Int,
+        @Field("environment") environment: String,
         @Field("program_goal") goal: String,
         @Field("proper_form") properForm: String,
         @Field("program_id") programId: Int
@@ -120,5 +129,14 @@ interface Api {
     ): Call<DefaultResponse>
 
     @GET("api/top-exercises/{goal}")
-    fun getTopExercisesByGoal(@Path("goal") goal: String): Call<TopExercisesResponse>
+    fun getTopExercisesByGoal(
+        @Path("goal") goal: String): Call<TopExercisesResponse>
+
+    @FormUrlEncoded
+    @POST("api/exerciserequest")
+    fun requestExercise(
+        @Field("ExerciseName") ExerciseName: String?,
+        @Field("GroupMuscle") GroupMuscle: String?,
+        @Field("TargetMuscle") TargetMuscle: String?
+    ): Call<DefaultResponse>
 }

@@ -177,6 +177,7 @@
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:hint="Age"
+        android:inputType="number"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="12sp"

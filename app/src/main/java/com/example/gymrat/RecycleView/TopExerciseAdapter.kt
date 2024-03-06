@@ -23,6 +23,7 @@ class TopExercisesAdapter(
     private var topExercisesList: List<TopExercisesData>
 ) : RecyclerView.Adapter<TopExercisesAdapter.ViewHolder>() {
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_exercise, parent, false)
         return ViewHolder(view)
@@ -35,6 +36,7 @@ class TopExercisesAdapter(
         holder.exerciseNameTextView.text = topExercisesData.exerciseName
         holder.groupMuscleTextView.text = topExercisesData.groupMuscle
         holder.targetMuscleTextView.text = topExercisesData.targetMuscle
+        holder.environmentTextView.text = topExercisesData.environment
 
         holder.formButton.setOnClickListener {
             showFormDialog(holder.itemView.context, topExercisesData.ProperForm)
@@ -104,7 +106,7 @@ class TopExercisesAdapter(
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,goal ,exercise.ProperForm,programid)
+        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,exercise.environment,goal ,exercise.ProperForm,programid)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
@@ -129,10 +131,13 @@ class TopExercisesAdapter(
         notifyDataSetChanged()
     }
 
+
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val exerciseNameTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
         val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
         val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
+        val environmentTextView: TextView=itemView.findViewById(R.id.environmentTextView)
         val addButton: Button = itemView.findViewById(R.id.addButton)
         val formButton: Button = itemView.findViewById(R.id.formButton)
     }

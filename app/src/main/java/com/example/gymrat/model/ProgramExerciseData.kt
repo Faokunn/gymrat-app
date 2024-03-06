@@ -10,6 +10,7 @@ data class ProgramExerciseData(
     val sets: Int,
     val reps: Int,
     val weight: Int,
+    val environment: String,
     val program_goal: String,
     val proper_form: String
 )
