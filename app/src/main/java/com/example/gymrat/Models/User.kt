@@ -16,6 +16,7 @@ data class Profile(
     val gender: String,
     val goal: String,
     val weight: Int,
+    val starting_weight: Int,
     val goal_weight: Int,
     val height:Int,
     val environment: String

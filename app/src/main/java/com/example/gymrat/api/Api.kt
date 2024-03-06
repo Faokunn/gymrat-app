@@ -32,6 +32,7 @@ interface Api {
         @Field("profile[age]") age: String,
         @Field("profile[goal]") goal: String,
         @Field("profile[weight]") weight: Int,
+        @Field("profile[starting_weight]") starting_weight: Int,
         @Field("profile[goal_weight]") goal_weight: Int,
         @Field("profile[height]") height: Int,
         @Field("profile[environment]") environemnt: String,
