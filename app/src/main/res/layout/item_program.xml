@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:background="#35374F"
+        android:background="#121323"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -66,51 +66,49 @@
                 app:srcCompat="@drawable/pencil" />
 
             <TextView
-                android:id="@+id/groupMuscleTextView"
+                android:id="@+id/exerciseNameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"
+                android:text="DUMBLE"
                 android:fontFamily="@font/mainfont"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/targetMuscleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="TARGET MUSCLE"
                 android:textColor="#F2F3F4"
                 android:fontFamily="@font/mainfont"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/exerciseNameTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
-                android:fontFamily="@font/mainfont"
-                android:textSize="15sp" />
-
+                android:textSize="8sp" />
 
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/sets"
+                android:text="123"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
+                android:textColor="#8DFFFFFF"
                 android:textSize="15sp" />
 
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/reps"
+                android:text="123"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
+                android:textColor="#8DFFFFFF"
                 android:textSize="15sp" />
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/weight"
+                android:text="123"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
+                android:textColor="#8DFFFFFF"
                 android:textSize="15sp" />
 
         </LinearLayout>
