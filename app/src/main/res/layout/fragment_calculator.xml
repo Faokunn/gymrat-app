@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="#121323"
     tools:context=".StartAndHome.CalculatorFragment">
+
     <EditText
         android:id="@+id/weight"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -41,7 +42,7 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/weight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         app:layout_constraintVertical_bias="0.45"></TextView>
@@ -59,7 +60,7 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/height"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight"
         app:layout_constraintVertical_bias="0.523"></TextView>
@@ -77,15 +78,15 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/physical_activitySpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/height"
         app:layout_constraintVertical_bias="0.588"></TextView>
 
     <Spinner
         android:id="@+id/physical_activitySpinner"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -108,8 +109,8 @@
 
     <EditText
         android:id="@+id/height"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -169,8 +170,8 @@
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
@@ -198,18 +199,18 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/age"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.775"></TextView>
+        app:layout_constraintVertical_bias="0.555"></TextView>
 
     <Spinner
         android:id="@+id/genderSpinner"
-        android:layout_width="288dp"
-        android:layout_height="50dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_below="@+id/age"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -226,13 +227,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/mainfont"
         android:text="Gender"
         android:textColor="@color/white"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age"></TextView>
 

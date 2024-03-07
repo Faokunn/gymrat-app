@@ -125,10 +125,9 @@ class HomiesFragment : Fragment() {
         binding.Goal.setOnClickListener {
             showEditWeightsDialog(requireContext())
         }
-        binding.tapToCalculate.setOnClickListener {
+        binding.Goal1.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
         }
-
         binding.calsButton.setOnClickListener {
             findNavController().navigate(R.id.action_homiesFragment_to_myprogramFragment)
         }

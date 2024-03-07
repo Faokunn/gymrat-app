@@ -70,7 +70,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#F2F3F4"
-                android:text="DUMBLE"
                 android:fontFamily="@font/mainfont"
                 android:textSize="20sp" />
 
@@ -78,7 +77,6 @@
                 android:id="@+id/targetMuscleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TARGET MUSCLE"
                 android:textColor="#F2F3F4"
                 android:fontFamily="@font/mainfont"
                 android:textSize="8sp" />
@@ -86,7 +84,6 @@
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/sets"
-                android:text="123"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#8DFFFFFF"
@@ -95,8 +92,6 @@
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/reps"
-                android:text="123"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#8DFFFFFF"
@@ -104,8 +99,6 @@
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/weight"
-                android:text="123"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#8DFFFFFF"

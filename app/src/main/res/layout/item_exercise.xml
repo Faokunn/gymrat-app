@@ -19,8 +19,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_width="132dp"
             android:layout_height="119dp"
             android:layout_marginEnd="8dp"
@@ -28,7 +27,7 @@
             android:src="@drawable/gymrat_logo" />
 
         <LinearLayout
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="13dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,51 +47,51 @@
                 android:id="@+id/groupMuscleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
-                android:textSize="15sp" />
+                android:textColor="#8DFFFFFF"
+                android:textSize="12sp" />
 
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/targetMuscleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
-                android:textSize="15sp" />
+                android:textColor="#8DFFFFFF"
+                android:textSize="12sp" />
 
             <TextView
                 android:fontFamily="@font/mainfont"
                 android:id="@+id/environmentTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#F2F3F4"
-                android:textSize="15sp" />
+                android:textColor="#8DFFFFFF"
+                android:textSize="12sp" />
 
             <LinearLayout
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Button
-                    android:fontFamily="@font/mainfont"
                     android:id="@+id/formButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="1dp"
                     android:backgroundTint="#494b60"
+                    android:fontFamily="@font/mainfont"
                     android:text="Form"
-                    android:textSize="15sp"
-                    android:textColor="#F2F3F4" />
+                    android:textColor="#F2F3F4"
+                    android:textSize="10sp" />
 
                 <Button
                     android:id="@+id/addButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37dp"
                     android:backgroundTint="#494b60"
                     android:fontFamily="@font/mainfont"
                     android:text="Add"
                     android:textColor="#F2F3F4"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

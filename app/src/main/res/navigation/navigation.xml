@@ -216,7 +216,11 @@
         android:id="@+id/myprogramFragment"
         android:name="com.example.gymrat.StartAndHome.MyprogramFragment"
         android:label="fragment_myprogram"
-        tools:layout="@layout/fragment_myprogram" />
+        tools:layout="@layout/fragment_myprogram" >
+        <action
+            android:id="@+id/action_myprogramFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ageFragment"
         android:name="com.example.gymrat.userthings.AgeFragment"
@@ -230,7 +234,11 @@
         android:id="@+id/topExercisesFragment"
         android:name="com.example.gymrat.StartAndHome.TopExercisesFragment"
         android:label="fragment_top_exercises"
-        tools:layout="@layout/fragment_top_exercises" />
+        tools:layout="@layout/fragment_top_exercises" >
+        <action
+            android:id="@+id/action_topExercisesFragment_to_homiesFragment"
+            app:destination="@id/homiesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/goalEnvironmentFragment"
         android:name="com.example.gymrat.userthings.GoalEnvironmentFragment"

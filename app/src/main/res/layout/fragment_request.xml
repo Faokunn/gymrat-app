@@ -19,7 +19,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.028">
@@ -30,12 +30,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="156dp"
         android:fontFamily="@font/mainfont"
         android:gravity="center"
         android:text="REQUEST: NEW EXERCISE"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -46,8 +46,8 @@
 
     <Spinner
         android:id="@+id/targetMuscleSpinner"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -60,7 +60,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groupMuscleSpinner"
@@ -70,17 +70,17 @@
 
     <Spinner
         android:id="@+id/groupMuscleSpinner"
-        android:layout_width="288dp"
-        android:layout_height="50dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_below="@+id/exerciseName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/login_edittext"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exerciseName"
         tools:ignore="MissingConstraints" />
@@ -97,10 +97,9 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/targetMuscleSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groupMuscleSpinner"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintTop_toBottomOf="@+id/groupMuscleSpinner" />
 
     <TextView
         android:id="@+id/textView1"
@@ -108,13 +107,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/mainfont"
         android:text="Excerise Name"
         android:textColor="@color/white"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -130,18 +129,18 @@
         android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@+id/groupMuscleSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exerciseName"
-        app:layout_constraintVertical_bias="0.718" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <EditText
         android:id="@+id/exerciseName"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/login_edittext"
         android:hint="Exercise Name"
         android:inputType="text"
@@ -150,13 +149,14 @@
         android:textColorHint="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/continue_button"
-        android:layout_width="272dp"
+        android:layout_width="268dp"
         android:layout_height="54dp"
         android:backgroundTint="@color/white"
         android:text="Send Request"
@@ -168,8 +168,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groupMuscleSpinner"
-        app:layout_constraintVertical_bias="0.623"/>
+        app:layout_constraintTop_toBottomOf="@+id/targetMuscleSpinner"
+        app:layout_constraintVertical_bias="0.177" />
 
     <Button
         android:id="@+id/back"
