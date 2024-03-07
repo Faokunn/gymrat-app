@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gymrat.Models.AuthManager
 import com.example.gymrat.Models.TopExercisesResponse
@@ -30,6 +31,9 @@ class TopExercisesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentTopExercisesBinding.inflate(inflater, container, false)
+        binding.back.setOnClickListener {
+            findNavController().navigate(R.id.action_topExercisesFragment_to_homiesFragment)
+        }
         return binding.root
     }
 

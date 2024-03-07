@@ -45,8 +45,8 @@
 
     <EditText
         android:id="@+id/confirm_password"
-        android:layout_width="288dp"
-        android:layout_height="54dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -66,8 +66,8 @@
 
     <EditText
         android:id="@+id/new_password"
-        android:layout_width="288dp"
-        android:layout_height="50dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -89,8 +89,8 @@
 
     <EditText
         android:id="@+id/current_password"
-        android:layout_width="291dp"
-        android:layout_height="48dp"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -112,8 +112,8 @@
 
     <Button
         android:id="@+id/continue_button"
-        android:layout_width="227dp"
-        android:layout_height="46dp"
+        android:layout_width="268dp"
+        android:layout_height="54dp"
         android:backgroundTint="@color/white"
         android:text="Change Password"
         android:textColor="@color/black"
@@ -121,36 +121,28 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_password"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
         android:id="@+id/back"
-        android:layout_width="39dp"
-        android:layout_height="45dp"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#121323"
+        android:fontFamily="@font/mainfont"
+        android:text="return"
+        android:textColor="#707070"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toEndOf="@+id/continue_button"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
-        app:layout_constraintVertical_bias="0.12" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="37dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/resource_return"
-        app:layout_constraintBottom_toBottomOf="@+id/back"
-        app:layout_constraintEnd_toEndOf="@+id/back"
-        app:layout_constraintStart_toStartOf="@+id/back"
-        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continue_button"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

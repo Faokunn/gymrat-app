@@ -64,7 +64,7 @@
         android:id="@+id/egg"
         android:layout_width="129dp"
         android:layout_height="71dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="35dp"
         android:src="@drawable/egg"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         android:layout_width="129dp"
         android:layout_height="71dp"
         android:layout_marginTop="48dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="40dp"
         android:src="@drawable/chickenbreast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/egg" />
@@ -111,7 +111,7 @@
         android:layout_width="129dp"
         android:layout_height="71dp"
         android:layout_marginTop="48dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="40dp"
         android:src="@drawable/centurytuna"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chicken" />
@@ -134,7 +134,7 @@
         android:layout_width="129dp"
         android:layout_height="71dp"
         android:layout_marginTop="48dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="40dp"
         android:src="@drawable/sardines"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/century" />
@@ -157,7 +157,7 @@
         android:layout_width="129dp"
         android:layout_height="71dp"
         android:layout_marginTop="48dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="40dp"
         android:src="@drawable/sanmarino"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sardinas" />
