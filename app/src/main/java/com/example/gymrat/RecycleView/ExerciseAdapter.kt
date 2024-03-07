@@ -61,7 +61,12 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
     private fun showFormDialog(context: Context, properForm: String) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle("Exercise Form")
-        builder.setMessage(properForm)
+
+        val sentences = properForm.split("\\.\\s+".toRegex())
+
+        val formattedForm = sentences.joinToString("\n")
+
+        builder.setMessage(formattedForm)
         builder.setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()
         }
