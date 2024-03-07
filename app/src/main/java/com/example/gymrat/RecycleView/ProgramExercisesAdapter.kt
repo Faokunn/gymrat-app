@@ -24,7 +24,6 @@ class ProgramExercisesAdapter(
 ) : RecyclerView.Adapter<ProgramExercisesAdapter.ProgramExerciseViewHolder>() {
 
     class ProgramExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
         val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
         val exerciseNameTextView: TextView = itemView.findViewById(R.id.exerciseNameTextView)
         val setsTextView: TextView = itemView.findViewById(R.id.sets)
@@ -45,7 +44,6 @@ class ProgramExercisesAdapter(
     override fun onBindViewHolder(holder: ProgramExerciseViewHolder, position: Int) {
         val programExercise = programExercises[position]
 
-        holder.groupMuscleTextView.text = programExercise.GroupMuscle
         holder.targetMuscleTextView.text = programExercise.targetMuscle
         holder.exerciseNameTextView.text = programExercise.exercise
         holder.setsTextView.text = "Sets: ${programExercise.sets}"

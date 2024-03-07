@@ -8,6 +8,7 @@ data class ExercisesData(
     @SerializedName("GroupMuscle") val groupMuscle: String,
     @SerializedName("TargetMuscle") val targetMuscle: String,
     @SerializedName("ProperForm") val properForm: String,
-    @SerializedName("Environment") val environment: String
+    @SerializedName("Environment") val environment: String,
+    @SerializedName("image") val image: String
 )
 

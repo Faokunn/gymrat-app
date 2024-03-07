@@ -1,13 +1,17 @@
 package com.example.gymrat.RecycleView
 
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import android.annotation.SuppressLint
 import com.example.gymrat.api.RetrofitClient
 import android.content.Context
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -28,6 +32,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
         val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
         val environmentTextView: TextView = itemView.findViewById(R.id.environmentTextView)
+        val image: ImageView = itemView.findViewById(R.id.imageView)
         val formButton: Button = itemView.findViewById(R.id.formButton)
         val addButton: Button = itemView.findViewById(R.id.addButton)
 
@@ -45,6 +50,13 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         holder.groupMuscleTextView.text = exercise.groupMuscle
         holder.targetMuscleTextView.text = exercise.targetMuscle
         holder.environmentTextView.text = exercise.environment
+
+        Glide.with(holder.itemView.context)
+            .load("https://gymrat-4acc1b203554.herokuapp.com/images/${exercise.image}")
+            .placeholder(R.drawable.logo)
+            .error(R.drawable.about)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .into(holder.image)
 
         holder.formButton.setOnClickListener {
             showFormDialog(holder.itemView.context, exercise.properForm)
