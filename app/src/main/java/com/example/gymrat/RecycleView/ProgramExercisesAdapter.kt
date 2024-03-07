@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.gymrat.Models.LoginResponse
 import com.example.gymrat.R
 import com.example.gymrat.api.Api
@@ -30,6 +33,7 @@ class ProgramExercisesAdapter(
         val repsTextView: TextView = itemView.findViewById(R.id.reps)
         val weightTextView: TextView = itemView.findViewById(R.id.weight)
         val editButton: Button = itemView.findViewById(R.id.Pencil)
+        val image: ImageView = itemView.findViewById(R.id.imageView)
         val deleteButton: Button = itemView.findViewById(R.id.Trashcan)
     }
 
@@ -49,6 +53,13 @@ class ProgramExercisesAdapter(
         holder.setsTextView.text = "Sets: ${programExercise.sets}"
         holder.repsTextView.text = "Reps: ${programExercise.reps}"
         holder.weightTextView.text = "Weight: ${programExercise.weight} kg"
+
+        Glide.with(holder.itemView.context)
+            .load("https://gymrat-4acc1b203554.herokuapp.com/images/exerciseImage/${programExercise.image}")
+            .placeholder(R.drawable.logo)
+            .error(R.drawable.about)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .into(holder.image)
 
         holder.editButton.setOnClickListener {
             showEditDialogWithData(holder.itemView.context, programExercise)

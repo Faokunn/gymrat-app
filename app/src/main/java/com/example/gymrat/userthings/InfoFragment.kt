@@ -68,6 +68,11 @@ class InfoFragment : Fragment() {
                 binding.email.requestFocus()
                 return@setOnClickListener
             }
+            if (!email.contains("@") || !email.contains(".com")) {
+                binding.email.error = "Invalid Email"
+                binding.email.requestFocus()
+                return@setOnClickListener
+            }
             RetrofitClient.instance.createUser(email, password, cpassword, nickname, age,goal, weight,weight,goalWeight,height,environment,gender,"$nickname's Program",goal,0,0,0).enqueue(object :
                 Callback<DefaultResponse> {
                 override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {

@@ -98,6 +98,11 @@ class RequestFragment : Fragment() {
         val groupMuscle = binding.groupMuscleSpinner.selectedItem.toString()
         val targetMuscle = binding.targetMuscleSpinner.selectedItem.toString()
 
+        if (exerciseName.isEmpty() || groupMuscle.isEmpty() || targetMuscle.isEmpty()) {
+            Toast.makeText(requireContext(), "All fields are required", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         RetrofitClient.instance.requestExercise(exerciseName, groupMuscle, targetMuscle)
             .enqueue(object : Callback<DefaultResponse> {
                 override fun onResponse(
@@ -118,7 +123,6 @@ class RequestFragment : Fragment() {
                         ).show()
                     }
                 }
-
                 override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
                     Toast.makeText(
                         requireContext(),

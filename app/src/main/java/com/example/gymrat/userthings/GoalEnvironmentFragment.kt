@@ -44,10 +44,17 @@ class GoalEnvironmentFragment : Fragment() {
         binding.continueButton.setOnClickListener {
             val selectedGoal = binding.goalSpinner.selectedItem.toString()
             val selectedEnvironment = binding.environmentSpinner.selectedItem.toString()
-            val weight = binding.weight.text.toString()
-            val height = binding.height.text.toString()
-            val goal_weight = binding.goalWeight.text.toString()
+            val weight = binding.weight.text.toString().trim()
+            val height = binding.height.text.toString().trim()
+            val goalWeight = binding.goalWeight.text.toString().trim()
 
+
+            if (selectedGoal.isEmpty() || selectedEnvironment.isEmpty() || weight.isEmpty() || height.isEmpty() || goalWeight.isEmpty()) {
+                binding.weight.error = "Field cannot be empty"
+                return@setOnClickListener
+            }
+
+            // Continue with navigation if all input fields are non-empty
             findNavController().navigate(R.id.action_goalEnvironmentFragment_to_infoFragment, Bundle().apply {
                 putString("gender", gender)
                 putString("age", age)
@@ -55,7 +62,7 @@ class GoalEnvironmentFragment : Fragment() {
                 putString("environment", selectedEnvironment)
                 putString("weight", weight)
                 putString("height", height)
-                putString("goalWeight", goal_weight)
+                putString("goalWeight", goalWeight)
             })
         }
 

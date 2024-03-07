@@ -52,14 +52,15 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         holder.environmentTextView.text = exercise.environment
 
         Glide.with(holder.itemView.context)
-            .load("https://gymrat-4acc1b203554.herokuapp.com/images/${exercise.image}")
+            .load("https://gymrat-4acc1b203554.herokuapp.com/images/exerciseImage/${exercise.image}")
             .placeholder(R.drawable.logo)
             .error(R.drawable.about)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(holder.image)
 
         holder.formButton.setOnClickListener {
-            showFormDialog(holder.itemView.context, exercise.properForm)
+            val imageUrl = "https://gymrat-4acc1b203554.herokuapp.com/images/formImage/${exercise.formImage}"
+            showFormDialog(holder.itemView.context, exercise.properForm, imageUrl)
         }
         holder.addButton.setOnClickListener {
             showAddDialog(holder.itemView.context, exercise)
@@ -70,18 +71,30 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
         return exercises.size
     }
 
-    private fun showFormDialog(context: Context, properForm: String) {
+    private fun showFormDialog(context: Context, properForm: String, imageUrl: String?) {
         val builder = AlertDialog.Builder(context)
-        builder.setTitle("Exercise Form")
+        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_exercise_form, null)
+
+        val exerciseFormText = dialogView.findViewById<TextView>(R.id.exerciseFormText)
 
         val sentences = properForm.split("\\.\\s+".toRegex())
-
         val formattedForm = sentences.joinToString("\n")
 
-        builder.setMessage(formattedForm)
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss()
-        }
+        exerciseFormText.text = formattedForm
+
+        val formImage = dialogView.findViewById<ImageView>(R.id.formImage)
+        Glide.with(context)
+            .load(imageUrl)
+            .placeholder(R.drawable.logo)
+            .error(R.drawable.about)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .into(formImage)
+
+        builder.setView(dialogView)
+            .setTitle("Exercise Form")
+            .setPositiveButton("OK") { dialog, _ ->
+                dialog.dismiss()
+            }
 
         val dialog = builder.create()
         dialog.show()
@@ -136,7 +149,7 @@ class ExerciseAdapter(private var exercises: List<ExercisesData>) : RecyclerView
     ) {
         val api = RetrofitClient.instance
 
-        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,exercise.environment,goal ,exercise.properForm,programid)
+        api.exerciseAdd(exercise.exerciseName,exercise.groupMuscle, exercise.targetMuscle, sets, reps, weight,exercise.environment,goal ,exercise.properForm,programid,exercise.image,exercise.formImage)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {

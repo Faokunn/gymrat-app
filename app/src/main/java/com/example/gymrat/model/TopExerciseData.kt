@@ -8,6 +8,8 @@ data class TopExercisesData(
     @SerializedName("TargetMuscle") val targetMuscle: String,
     val environment: String,
     @SerializedName("Count") val count: Int,
-    val ProperForm:String
+    val ProperForm:String,
+    val image:String,
+    val formImage:String,
 )
 

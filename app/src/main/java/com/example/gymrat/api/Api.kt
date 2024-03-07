@@ -93,7 +93,9 @@ interface Api {
         @Field("environment") environment: String,
         @Field("program_goal") goal: String,
         @Field("proper_form") properForm: String,
-        @Field("program_id") programId: Int
+        @Field("program_id") programId: Int,
+        @Field("image") image: String,
+        @Field("formImage") formImage: String,
     ): Call<LoginResponse>
 
     @FormUrlEncoded

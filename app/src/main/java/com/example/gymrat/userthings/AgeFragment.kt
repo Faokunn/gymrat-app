@@ -23,13 +23,19 @@ class AgeFragment : Fragment() {
         binding = FragmentAgeBinding.inflate(inflater, container, false)
 
         binding.continueButton.setOnClickListener {
-            val ageInput = binding.ageEditText.text.toString()
+            val ageInput = binding.ageEditText.text.toString().trim()
+
             if (ageInput.isNotBlank()) {
-                val age = ageInput
-                findNavController().navigate(R.id.action_ageFragment_to_goalEnvironmentFragment, Bundle().apply {
-                    putString("gender", gender)
-                    putString("age", age)
-                })
+                val age = ageInput.toIntOrNull()
+
+                if (age != null && age in 12..60) {
+                    findNavController().navigate(R.id.action_ageFragment_to_goalEnvironmentFragment, Bundle().apply {
+                        putString("gender", gender)
+                        putInt("age", age)
+                    })
+
+                    Toast.makeText(requireContext(), "Please enter a valid age between 12 and 60", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(requireContext(), "Please enter your age", Toast.LENGTH_SHORT).show()
             }

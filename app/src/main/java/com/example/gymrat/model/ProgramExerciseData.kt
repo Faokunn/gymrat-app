@@ -12,6 +12,8 @@ data class ProgramExerciseData(
     val weight: Int,
     val environment: String,
     val program_goal: String,
-    val proper_form: String
+    val proper_form: String,
+    val image: String,
+    val formImage: String,
 )
 
