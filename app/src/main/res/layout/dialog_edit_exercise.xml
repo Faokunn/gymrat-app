@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="@font/mainfont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:gravity="center"/>
 
         <EditText
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:fontFamily="@font/mainfont"
             android:id="@+id/editSets"
             android:textColor="@color/black"
@@ -36,7 +36,7 @@
             android:autofillHints="" />
 
         <EditText
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:fontFamily="@font/mainfont"
             android:id="@+id/editReps"
             android:textColor="@color/black"
@@ -48,7 +48,7 @@
             android:autofillHints="" />
 
         <EditText
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:fontFamily="@font/mainfont"
             android:textColor="@color/black"
             android:id="@+id/editWeight"

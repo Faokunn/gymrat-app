@@ -17,7 +17,9 @@
             android:id="@+id/editTextWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mainfont"
             android:hint="@string/current_weight"
+            android:textColor="@color/white"
             android:inputType="numberDecimal"
             android:autofillHints="" />
 
@@ -25,6 +27,8 @@
             android:id="@+id/editTextGoalWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mainfont"
+            android:textColor="@color/white"
             android:hint="@string/goal_weight"
             android:inputType="numberDecimal"/>
 

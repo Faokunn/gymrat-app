@@ -5,16 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.gymrat.R
+import com.example.gymrat.databinding.FragmentAboutBinding
+import com.example.gymrat.databinding.FragmentProteinBinding
 
 class ProteinFragment : Fragment() {
-
+    private lateinit var binding: FragmentProteinBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_protein, container, false)
+        binding = FragmentProteinBinding.inflate(inflater, container, false)
+        binding.back.setOnClickListener {
+            findNavController().navigate(R.id.action_proteinFragment_to_homiesFragment)
+        }
+        return binding.root
     }
 
 }

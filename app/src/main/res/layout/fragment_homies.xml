@@ -78,7 +78,7 @@
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/mainfont"
             android:text="Welcome Null"
@@ -94,7 +94,7 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/mainfont"
-            android:text="Recommended Exercises"
+            android:text="Recommended Top Exercises"
             android:backgroundTint="@color/button_color"
             android:textSize="10dp"
             android:textColor="@color/white"
@@ -382,7 +382,7 @@
 
                         <ImageButton
                             android:id="@+id/cals_button"
-                            android:layout_width="319dp"
+                            android:layout_width="318dp"
                             android:layout_height="134dp"
                             android:layout_marginStart="34dp"
                             android:src="@drawable/myprogram"
@@ -429,8 +429,8 @@
                     android:layout_width="319dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
-                    android:padding="1dp"
                     android:src="@drawable/chest_button"
+                    android:padding="1dp"
                     android:scaleType="fitCenter"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.469"
@@ -467,7 +467,7 @@
 
                 <ImageButton
                     android:id="@+id/back_button"
-                    android:layout_width="319dp"
+                    android:layout_width="318dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/back_button"
@@ -508,7 +508,7 @@
 
                 <ImageButton
                     android:id="@+id/biceps_button"
-                    android:layout_width="319dp"
+                    android:layout_width="318dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/biceps_button"
@@ -549,7 +549,7 @@
 
                 <ImageButton
                     android:id="@+id/triceps_button"
-                    android:layout_width="319dp"
+                    android:layout_width="318dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/triceps_button"
@@ -590,7 +590,7 @@
 
                 <ImageButton
                     android:id="@+id/should_button"
-                    android:layout_width="319dp"
+                    android:layout_width="318dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/shoulder_button"
@@ -631,7 +631,7 @@
 
                 <ImageButton
                     android:id="@+id/legs_button"
-                    android:layout_width="319dp"
+                    android:layout_width="318dp"
                     android:layout_height="134dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/legs_button"
@@ -696,6 +696,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@color/button_color"
+            app:itemTextColor="@color/white"
             app:headerLayout="@layout/dh_navigation"
             app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
             app:layout_constraintEnd_toEndOf="parent"
