@@ -72,27 +72,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button
                     android:id="@+id/formButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_marginEnd="1dp"
-                    android:backgroundTint="#494b60"
-                    android:fontFamily="@font/mainfont"
-                    android:text="Form"
-                    android:textColor="#F2F3F4"
-                    android:textSize="10sp" />
+                    android:backgroundTint="@color/white"
+                    android:layout_width="20dp"
+                    android:layout_height="27dp" />
+
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="19dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="4.5dp"
+                    android:layout_marginLeft="-19.50dp"
+                    app:srcCompat="@drawable/muscle" />
 
                 <Button
                     android:id="@+id/addButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:backgroundTint="#494b60"
-                    android:fontFamily="@font/mainfont"
-                    android:text="Add"
-                    android:textColor="#F2F3F4"
-                    android:textSize="10sp" />
+                    android:backgroundTint="@color/white"
+                    android:layout_width="20dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="117dp" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="-20dp"
+                    app:srcCompat="@drawable/add" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
