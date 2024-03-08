@@ -28,10 +28,11 @@ class TopExercisesAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_exercise, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_topexercise, parent, false)
         return ViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val topExercisesData = topExercisesList[position]
 
@@ -40,6 +41,7 @@ class TopExercisesAdapter(
         holder.groupMuscleTextView.text = topExercisesData.groupMuscle
         holder.targetMuscleTextView.text = topExercisesData.targetMuscle
         holder.environmentTextView.text = topExercisesData.environment
+        holder.numberTextView.text = "#${(position + 1)}"
 
         Glide.with(holder.itemView.context)
             .load("https://gymrat-4acc1b203554.herokuapp.com/images/exerciseImage/${topExercisesData.image}")
@@ -166,6 +168,7 @@ class TopExercisesAdapter(
         val groupMuscleTextView: TextView = itemView.findViewById(R.id.groupMuscleTextView)
         val targetMuscleTextView: TextView = itemView.findViewById(R.id.targetMuscleTextView)
         val environmentTextView: TextView=itemView.findViewById(R.id.environmentTextView)
+        val numberTextView: TextView=itemView.findViewById(R.id.number)
         val addButton: Button = itemView.findViewById(R.id.addButton)
         val formButton: Button = itemView.findViewById(R.id.formButton)
         val image: ImageView = itemView.findViewById(R.id.imageView)
