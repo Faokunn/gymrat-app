@@ -14,10 +14,6 @@
             android:icon="@drawable/change"
             android:title="CHANGE PASSWORD"/>
         <item
-            android:id="@+id/nav_programs"
-            android:icon="@drawable/muscle"
-            android:title="REQUEST EXERCISE"/>
-        <item
             android:id="@+id/nav_sarisari"
             android:icon="@drawable/nav_egg"
             android:title="SARI-SARI"/>

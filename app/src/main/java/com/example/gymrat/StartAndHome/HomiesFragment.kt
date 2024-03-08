@@ -183,9 +183,6 @@ class HomiesFragment : Fragment() {
                 R.id.nav_sarisari -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_proteinFragment)
                 }
-                R.id.nav_programs -> {
-                    findNavController().navigate(R.id.action_homiesFragment_to_requestFragment)
-                }
                 R.id.nav_calculator -> {
                     findNavController().navigate(R.id.action_homiesFragment_to_calculatorFragment)
                 }

@@ -33,7 +33,8 @@ class AgeFragment : Fragment() {
                         putString("gender", gender)
                         putInt("age", age)
                     })
-
+                }
+                else{
                     Toast.makeText(requireContext(), "Please enter a valid age between 12 and 60", Toast.LENGTH_SHORT).show()
                 }
             } else {

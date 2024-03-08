@@ -135,11 +135,4 @@ interface Api {
     fun getTopExercisesByGoal(
         @Path("goal") goal: String): Call<TopExercisesResponse>
 
-    @FormUrlEncoded
-    @POST("api/exerciserequest")
-    fun requestExercise(
-        @Field("ExerciseName") ExerciseName: String?,
-        @Field("GroupMuscle") GroupMuscle: String?,
-        @Field("TargetMuscle") TargetMuscle: String?
-    ): Call<DefaultResponse>
 }
