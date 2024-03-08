@@ -69,7 +69,10 @@
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint=" Confirm New Password"
+
+        android:ems="10"
         android:inputType="textPassword"
+
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -106,7 +109,10 @@
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint=" New Password"
+
+        android:ems="10"
         android:inputType="textPassword"
+
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -145,6 +151,10 @@
         android:height="1000dp"
         android:background="@drawable/login_edittext"
         android:hint=" Current Password"
+
+        android:ems="10"
+        android:inputType="textPassword"
+
         android:maxLines="1"
         android:textAlignment="center"
         android:textColor="@color/white"

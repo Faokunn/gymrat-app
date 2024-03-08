@@ -40,13 +40,13 @@
                 android:backgroundTint="@color/white"
                 android:layout_width="20dp"
                 android:layout_height="27dp"
-                android:layout_marginLeft="197dp" />
+                android:layout_marginLeft="147dp" />
 
             <ImageView
                 android:id="@+id/delete"
                 android:layout_width="20dp"
                 android:layout_height="19dp"
-                android:layout_marginLeft="197dp"
+                android:layout_marginLeft="147dp"
                 android:layout_marginTop="-23.2dp"
                 app:srcCompat="@drawable/trashcan" />
 
@@ -56,13 +56,13 @@
                 android:layout_width="20dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="-23dp"
-                android:layout_marginLeft="167dp" />
+                android:layout_marginLeft="117dp" />
 
             <ImageView
                 android:id="@+id/edit"
                 android:layout_width="20dp"
                 android:layout_height="19dp"
-                android:layout_marginLeft="167dp"
+                android:layout_marginLeft="117dp"
                 android:layout_marginTop="-23.2dp"
                 app:srcCompat="@drawable/pencil" />
 
