@@ -72,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/formButton"
                     android:backgroundTint="@color/white"
@@ -83,7 +84,7 @@
                     android:layout_width="19dp"
                     android:layout_height="18dp"
                     android:layout_marginTop="4.5dp"
-                    android:layout_marginLeft="-19.50dp"
+                    android:layout_marginLeft="-20dp"
                     app:srcCompat="@drawable/muscle" />
 
                 <Button

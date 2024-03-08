@@ -35,37 +35,6 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/Trashcan"
-                android:backgroundTint="@color/white"
-                android:layout_width="20dp"
-                android:layout_height="27dp"
-                android:layout_marginLeft="147dp" />
-
-            <ImageView
-                android:id="@+id/delete"
-                android:layout_width="20dp"
-                android:layout_height="19dp"
-                android:layout_marginLeft="147dp"
-                android:layout_marginTop="-23.2dp"
-                app:srcCompat="@drawable/trashcan" />
-
-            <Button
-                android:id="@+id/Pencil"
-                android:backgroundTint="@color/white"
-                android:layout_width="20dp"
-                android:layout_height="27dp"
-                android:layout_marginTop="-23dp"
-                android:layout_marginLeft="117dp" />
-
-            <ImageView
-                android:id="@+id/edit"
-                android:layout_width="20dp"
-                android:layout_height="19dp"
-                android:layout_marginLeft="117dp"
-                android:layout_marginTop="-23.2dp"
-                app:srcCompat="@drawable/pencil" />
-
             <TextView
                 android:id="@+id/exerciseNameTextView"
                 android:layout_width="match_parent"
@@ -104,7 +73,41 @@
                 android:layout_height="wrap_content"
                 android:textColor="#8DFFFFFF"
                 android:textSize="15sp" />
+            <LinearLayout
+                android:layout_marginLeft="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/Pencil"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="20dp"
+                    android:layout_height="27dp" />
 
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="19dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="4.5dp"
+                    android:layout_marginLeft="-20dp"
+                    app:srcCompat="@drawable/pencil" />
+
+                <Button
+                    android:id="@+id/Trashcan"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="20dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="117dp" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="-20dp"
+                    app:srcCompat="@drawable/trashcan" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
